@@ -58,7 +58,7 @@
 		83B7FC90278F72D1002CE83E /* CivicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CivicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B7FC94278F72D1002CE83E /* CivicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivicUITests.swift; sourceTree = "<group>"; };
 		83B7FC96278F72D1002CE83E /* CivicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivicUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		83B7FCA3278F9F28002CE83E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		83B7FCA4278FA1D1002CE83E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BCBDD97010B6111A8203CC90 /* Pods-CivicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CivicTests.debug.xcconfig"; path = "Target Support Files/Pods-CivicTests/Pods-CivicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E48E18F60AF3323B68E652F1 /* Pods-Civic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Civic.debug.xcconfig"; path = "Target Support Files/Pods-Civic/Pods-Civic.debug.xcconfig"; sourceTree = "<group>"; };
 		FF833B0A45D428EEF1167D60 /* libPods-Civic-CivicUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Civic-CivicUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +108,7 @@
 		83B7FC67278F72CF002CE83E = {
 			isa = PBXGroup;
 			children = (
-				83B7FCA3278F9F28002CE83E /* Config.xcconfig */,
+				83B7FCA4278FA1D1002CE83E /* Config.xcconfig */,
 				83B7FC72278F72CF002CE83E /* Civic */,
 				83B7FC89278F72D1002CE83E /* CivicTests */,
 				83B7FC93278F72D1002CE83E /* CivicUITests */,
