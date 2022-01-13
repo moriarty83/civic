@@ -7,7 +7,7 @@
 	<key>REVERSED_CLIENT_ID</key>
 	<string>com.googleusercontent.apps.658356053931-imm6vrbt73dk7lmsc9lo0sp3nbji8rfi</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAQkvjpzWuY905P5IVhykWhrl7dZGqByMc</string>
+	<string>$(CIVIC_KEY)</string>
 	<key>GCM_SENDER_ID</key>
 	<string>658356053931</string>
 	<key>PLIST_VERSION</key>
@@ -19,15 +19,15 @@
 	<key>STORAGE_BUCKET</key>
 	<string>civic-338018.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:658356053931:ios:42bba0f9ec5388551814ee</string>
 </dict>
