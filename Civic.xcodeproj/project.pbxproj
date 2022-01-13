@@ -17,6 +17,9 @@
 		83B7FC8B278F72D1002CE83E /* CivicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC8A278F72D1002CE83E /* CivicTests.swift */; };
 		83B7FC95278F72D1002CE83E /* CivicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC94278F72D1002CE83E /* CivicUITests.swift */; };
 		83B7FC97278F72D1002CE83E /* CivicUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC96278F72D1002CE83E /* CivicUITestsLaunchTests.swift */; };
+		83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCA8278FA559002CE83E /* ElectionManager.swift */; };
+		83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCAA278FA574002CE83E /* RepsManager.swift */; };
+		83B7FCAD278FA63B002CE83E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCAC278FA63B002CE83E /* Constants.swift */; };
 		8A635166E7D03E310179D637 /* libPods-CivicTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 079C1838F352073321B29E9D /* libPods-CivicTests.a */; };
 		B5A0A198DB67C742D17F6708 /* libPods-Civic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A3D820D0D115ACACCED7CB2 /* libPods-Civic.a */; };
 /* End PBXBuildFile section */
@@ -59,6 +62,9 @@
 		83B7FC94278F72D1002CE83E /* CivicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivicUITests.swift; sourceTree = "<group>"; };
 		83B7FC96278F72D1002CE83E /* CivicUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CivicUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		83B7FCA4278FA1D1002CE83E /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		83B7FCA8278FA559002CE83E /* ElectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionManager.swift; sourceTree = "<group>"; };
+		83B7FCAA278FA574002CE83E /* RepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsManager.swift; sourceTree = "<group>"; };
+		83B7FCAC278FA63B002CE83E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BCBDD97010B6111A8203CC90 /* Pods-CivicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CivicTests.debug.xcconfig"; path = "Target Support Files/Pods-CivicTests/Pods-CivicTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E48E18F60AF3323B68E652F1 /* Pods-Civic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Civic.debug.xcconfig"; path = "Target Support Files/Pods-Civic/Pods-Civic.debug.xcconfig"; sourceTree = "<group>"; };
 		FF833B0A45D428EEF1167D60 /* libPods-Civic-CivicUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Civic-CivicUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +137,9 @@
 		83B7FC72278F72CF002CE83E /* Civic */ = {
 			isa = PBXGroup;
 			children = (
+				83B7FCA7278FA50A002CE83E /* Controllers */,
+				83B7FCA6278FA4FD002CE83E /* Views */,
+				83B7FCA5278FA4F7002CE83E /* Models */,
 				83B7FC73278F72CF002CE83E /* AppDelegate.swift */,
 				83B7FC75278F72CF002CE83E /* SceneDelegate.swift */,
 				83B7FC77278F72CF002CE83E /* ViewController.swift */,
@@ -138,6 +147,7 @@
 				83B7FC7C278F72D0002CE83E /* Assets.xcassets */,
 				83B7FC7E278F72D0002CE83E /* LaunchScreen.storyboard */,
 				83B7FC81278F72D0002CE83E /* Info.plist */,
+				83B7FCAC278FA63B002CE83E /* Constants.swift */,
 			);
 			path = Civic;
 			sourceTree = "<group>";
@@ -157,6 +167,29 @@
 				83B7FC96278F72D1002CE83E /* CivicUITestsLaunchTests.swift */,
 			);
 			path = CivicUITests;
+			sourceTree = "<group>";
+		};
+		83B7FCA5278FA4F7002CE83E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		83B7FCA6278FA4FD002CE83E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83B7FCA7278FA50A002CE83E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				83B7FCA8278FA559002CE83E /* ElectionManager.swift */,
+				83B7FCAA278FA574002CE83E /* RepsManager.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E2720D0F5CC01969B7DC302B /* Frameworks */ = {
@@ -374,7 +407,10 @@
 			files = (
 				83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */,
 				83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */,
+				83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */,
+				83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */,
 				83B7FC76278F72CF002CE83E /* SceneDelegate.swift in Sources */,
+				83B7FCAD278FA63B002CE83E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +468,7 @@
 /* Begin XCBuildConfiguration section */
 		83B7FC98278F72D1002CE83E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83B7FCA4278FA1D1002CE83E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -493,6 +530,7 @@
 		};
 		83B7FC99278F72D1002CE83E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83B7FCA4278FA1D1002CE83E /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
