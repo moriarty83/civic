@@ -29,6 +29,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Login">
                                                     <color key="baseBackgroundColor" name="ThemeRed"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xyP-MZ-Ehc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ywp-ZQ-25M">
                                                 <rect key="frame" x="117.5" y="0.0" width="77.5" height="31"/>
@@ -57,7 +60,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="CLm-cW-sRr"/>
                     <connections>
-                        <segue destination="ACa-Lx-6Ul" kind="show" id="t3B-fc-gRi"/>
+                        <segue destination="ACa-Lx-6Ul" kind="show" identifier="loginToCivic" id="t3B-fc-gRi"/>
                         <segue destination="6WO-qP-eEe" kind="show" id="t07-Me-mXN"/>
                     </connections>
                 </viewController>
@@ -149,46 +152,74 @@
         <!--Login-->
         <scene sceneID="xTO-ed-dcz">
             <objects>
-                <viewController id="ACa-Lx-6Ul" customClass="LoginViewController" customModule="Civic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" id="ACa-Lx-6Ul" customClass="LoginViewController" customModule="Civic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="crk-5j-q4N" customClass="Log">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Odn-t5-G8b">
-                                <rect key="frame" x="159" y="319" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="email"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLT-6U-10z">
-                                <rect key="frame" x="186" y="274" width="41" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOe-3d-80I">
-                                <rect key="frame" x="169" y="399" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNG-MF-hQX">
-                                <rect key="frame" x="158" y="451" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="password"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="YOM-Rs-cNb">
+                                <rect key="frame" x="50" y="50" width="314" height="224"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LtO-18-EKE">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLT-6U-10z">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Odn-t5-G8b">
+                                                <rect key="frame" x="0.0" y="20.5" width="314" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v2K-CN-JJA">
+                                        <rect key="frame" x="0.0" y="96.5" width="314" height="54.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOe-3d-80I">
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xNG-MF-hQX">
+                                                <rect key="frame" x="0.0" y="20.5" width="314" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBK-73-HDC">
+                                        <rect key="frame" x="0.0" y="193" width="314" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="ACa-Lx-6Ul" eventType="touchUpInside" id="z0J-QV-wm0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H57-5j-Xdq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YOM-Rs-cNb" firstAttribute="top" secondItem="H57-5j-Xdq" secondAttribute="top" constant="50" id="FP2-cp-eBd"/>
+                            <constraint firstItem="YOM-Rs-cNb" firstAttribute="leading" secondItem="H57-5j-Xdq" secondAttribute="leading" constant="50" id="VHn-YL-dkz"/>
+                            <constraint firstItem="H57-5j-Xdq" firstAttribute="trailing" secondItem="YOM-Rs-cNb" secondAttribute="trailing" constant="50" id="arB-rP-VMq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="dTF-yi-nHX"/>
+                    <connections>
+                        <outlet property="emailTextfield" destination="Odn-t5-G8b" id="msG-Ju-pJF"/>
+                        <outlet property="passwordTextfield" destination="xNG-MF-hQX" id="gSX-eC-a9g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zc-af-vHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432" y="820"/>
+            <point key="canvasLocation" x="1430.4347826086957" y="819.64285714285711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DJY-Db-eL0">

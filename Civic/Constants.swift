@@ -7,6 +7,7 @@
 import Foundation
 
 struct K {
+    static let loginSegue = "loginToCivic"
     
     struct Reps {
         static let api_key = Bundle.main.infoDictionary?["CIVIC_KEY"] as? String
