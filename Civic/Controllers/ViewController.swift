@@ -10,6 +10,11 @@ import Firebase
 
 class ViewController: UIViewController {
     
+    @IBAction func didTapRegister(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "register") as! RegisterViewController
+        vc.title = "Register"
+        navigationController?.pushViewController(vc, animated: true)
+    }
     var repsManager = RepsManager()
 
     override func viewDidLoad() {

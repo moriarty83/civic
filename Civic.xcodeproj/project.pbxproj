@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832FAEE827908185003E39EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 832FAEE727908185003E39EB /* GoogleService-Info.plist */; };
 		83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1C278FC0AB00F4D385 /* LoginViewController.swift */; };
 		83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1E278FC17500F4D385 /* RegisterViewController.swift */; };
 		83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC73278F72CF002CE83E /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		063E95E8DEF524856DC19368 /* Pods-Civic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Civic.release.xcconfig"; path = "Target Support Files/Pods-Civic/Pods-Civic.release.xcconfig"; sourceTree = "<group>"; };
+		832FAEE727908185003E39EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83339B1C278FC0AB00F4D385 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83339B1E278FC17500F4D385 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		83B7FC70278F72CF002CE83E /* Civic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Civic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,9 +135,9 @@
 				83B7FCA5278FA4F7002CE83E /* Models */,
 				83B7FCA7278FA50A002CE83E /* Controllers */,
 				83B7FC7C278F72D0002CE83E /* Assets.xcassets */,
-				83B7FC7E278F72D0002CE83E /* LaunchScreen.storyboard */,
-				83B7FC81278F72D0002CE83E /* Info.plist */,
 				83B7FCAC278FA63B002CE83E /* Constants.swift */,
+				83B7FC81278F72D0002CE83E /* Info.plist */,
+				832FAEE727908185003E39EB /* GoogleService-Info.plist */,
 			);
 			path = Civic;
 			sourceTree = "<group>";
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				83B7FC79278F72CF002CE83E /* Main.storyboard */,
+				83B7FC7E278F72D0002CE83E /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,13 +206,15 @@
 				83B7FC6C278F72CF002CE83E /* Sources */,
 				83B7FC6D278F72CF002CE83E /* Frameworks */,
 				83B7FC6E278F72CF002CE83E /* Resources */,
-				05787AC81F279659AC21D636 /* [CP] Embed Pods Frameworks */,
+				97D50FA1D601C209FE739DC3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Civic;
+			packageProductDependencies = (
+			);
 			productName = Civic;
 			productReference = 83B7FC70278F72CF002CE83E /* Civic.app */;
 			productType = "com.apple.product-type.application";
@@ -282,6 +287,8 @@
 				Base,
 			);
 			mainGroup = 83B7FC67278F72CF002CE83E;
+			packageReferences = (
+			);
 			productRefGroup = 83B7FC71278F72CF002CE83E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B7FC80278F72D0002CE83E /* LaunchScreen.storyboard in Resources */,
+				832FAEE827908185003E39EB /* GoogleService-Info.plist in Resources */,
 				83B7FC7D278F72D0002CE83E /* Assets.xcassets in Resources */,
 				83B7FC7B278F72CF002CE83E /* Main.storyboard in Resources */,
 			);
@@ -321,23 +329,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05787AC81F279659AC21D636 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8A30CEF6109F7766E4C9E811 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -358,6 +349,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97D50FA1D601C209FE739DC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
