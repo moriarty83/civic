@@ -1,0 +1,1324 @@
+{
+  "normalizedInput": {
+    "line1": "1263 Pacific Avenue",
+    "city": "Kansas City",
+    "state": "KS",
+    "zip": "66102"
+  },
+  "kind": "civicinfo#representativeInfoResponse",
+  "divisions": {
+    "ocd-division/country:us/state:ks/sldu:6": {
+      "name": "Kansas State Senate district 6",
+      "officeIndices": [
+        10
+      ]
+    },
+    "ocd-division/country:us/state:ks/cd:3": {
+      "name": "Kansas's 3rd congressional district",
+      "officeIndices": [
+        3
+      ]
+    },
+    "ocd-division/country:us": {
+      "name": "United States",
+      "officeIndices": [
+        0,
+        1
+      ]
+    },
+    "ocd-division/country:us/state:ks/county:wyandotte": {
+      "name": "Wyandotte County",
+      "officeIndices": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    "ocd-division/country:us/state:ks": {
+      "name": "Kansas",
+      "officeIndices": [
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12
+      ]
+    },
+    "ocd-division/country:us/state:ks/county:wyandotte/council_district:2": {
+      "name": "Wyandotte County Commissioner District 2",
+      "officeIndices": [
+        18
+      ]
+    },
+    "ocd-division/country:us/state:ks/sldl:32": {
+      "name": "Kansas State House district 32",
+      "officeIndices": [
+        11
+      ]
+    },
+    "ocd-division/country:us/state:ks/place:kansas_city": {
+      "name": "Kansas City city"
+    }
+  },
+  "offices": [
+    {
+      "name": "President of the United States",
+      "divisionId": "ocd-division/country:us",
+      "levels": [
+        "country"
+      ],
+      "roles": [
+        "headOfGovernment",
+        "headOfState"
+      ],
+      "officialIndices": [
+        0
+      ]
+    },
+    {
+      "name": "Vice President of the United States",
+      "divisionId": "ocd-division/country:us",
+      "levels": [
+        "country"
+      ],
+      "roles": [
+        "deputyHeadOfGovernment"
+      ],
+      "officialIndices": [
+        1
+      ]
+    },
+    {
+      "name": "U.S. Senator",
+      "divisionId": "ocd-division/country:us/state:ks",
+      "levels": [
+        "country"
+      ],
+      "roles": [
+        "legislatorUpperBody"
+      ],
+      "officialIndices": [
+        2,
+        3
+      ]
+    },
+    {
+      "name": "U.S. Representative",
+      "divisionId": "ocd-division/country:us/state:ks/cd:3",
+      "levels": [
+        "country"
+      ],
+      "roles": [
+        "legislatorLowerBody"
+      ],
+      "officialIndices": [
+        4
+      ]
+    },
+    {
+      "name": "Governor of Kansas",
+      "divisionId": "ocd-division/country:us/state:ks",
+      "levels": [
+        "administrativeArea1"
+      ],
+      "roles": [
+        "headOfGovernment"
+      ],
+      "officialIndices": [
+        5
+      ]
+    },
+    {
+      "name": "Lieutenant Governor of Kansas",
+      "divisionId": "ocd-division/country:us/state:ks",
+      "levels": [
+        "administrativeArea1"
+      ],
+      "roles": [
+        "deputyHeadOfGovernment"
+      ],
+      "officialIndices": [
+        6
+      ]
+    },
+    {
+      "name": "KS Attorney General",
+      "divisionId": "ocd-division/country:us/state:ks",
+      "levels": [
+        "administrativeArea1"
+      ],
+      "roles": [
+        "governmentOfficer"
+      ],
+      "officialIndices": [
+        7
+      ]
+    },
+    {
+      "name": "KS Secretary of State",
+      "divisionId": "ocd-division/country:us/state:ks",
+      "levels": [
+        "administrativeArea1"
+      ],
+      "roles": [
+        "governmentOfficer"
+      ],
+      "officialIndices": [
+        8
+      ]
+    },
+    {
+      "name": "KS State Treasurer",
+      "divisionId": "ocd-division/country:us/state:ks",
+      "levels": [
+        "administrativeArea1"
+      ],
+      "roles": [
+        "governmentOfficer"
+      ],
+      "officialIndices": [
+        9
+      ]
+    },
+    {
+      "name": "KS Insurance Commissioner",
+      "divisionId": "ocd-division/country:us/state:ks",
+      "levels": [
+        "administrativeArea1"
+      ],
+      "roles": [
+        "governmentOfficer"
+      ],
+      "officialIndices": [
+        10
+      ]
+    },
+    {
+      "name": "KS State Senator",
+      "divisionId": "ocd-division/country:us/state:ks/sldu:6",
+      "levels": [
+        "administrativeArea1"
+      ],
+      "roles": [
+        "legislatorUpperBody"
+      ],
+      "officialIndices": [
+        11
+      ]
+    },
+    {
+      "name": "KS State Representative",
+      "divisionId": "ocd-division/country:us/state:ks/sldl:32",
+      "levels": [
+        "administrativeArea1"
+      ],
+      "roles": [
+        "legislatorLowerBody"
+      ],
+      "officialIndices": [
+        12
+      ]
+    },
+    {
+      "name": "KS State Supreme Court Justice",
+      "divisionId": "ocd-division/country:us/state:ks",
+      "levels": [
+        "administrativeArea1"
+      ],
+      "roles": [
+        "judge"
+      ],
+      "officialIndices": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "name": "Mayor of Wyandotte County-Kansas City Unified Government/CEO",
+      "divisionId": "ocd-division/country:us/state:ks/county:wyandotte",
+      "levels": [
+        "administrativeArea2"
+      ],
+      "roles": [
+        "headOfGovernment"
+      ],
+      "officialIndices": [
+        20
+      ]
+    },
+    {
+      "name": "Wyandotte County-Kansas City Unified Government Register of Deeds",
+      "divisionId": "ocd-division/country:us/state:ks/county:wyandotte",
+      "levels": [
+        "administrativeArea2"
+      ],
+      "roles": [
+        "governmentOfficer"
+      ],
+      "officialIndices": [
+        21
+      ]
+    },
+    {
+      "name": "Wyandotte County-Kansas City Unified Government Sheriff",
+      "divisionId": "ocd-division/country:us/state:ks/county:wyandotte",
+      "levels": [
+        "administrativeArea2"
+      ],
+      "roles": [
+        "governmentOfficer"
+      ],
+      "officialIndices": [
+        22
+      ]
+    },
+    {
+      "name": "Wyandotte County-Kansas City Unified Government District Attorney",
+      "divisionId": "ocd-division/country:us/state:ks/county:wyandotte",
+      "levels": [
+        "administrativeArea2"
+      ],
+      "roles": [
+        "governmentOfficer"
+      ],
+      "officialIndices": [
+        23
+      ]
+    },
+    {
+      "name": "Wyandotte County-Kansas City Unified Government Commissioner",
+      "divisionId": "ocd-division/country:us/state:ks/county:wyandotte",
+      "levels": [
+        "administrativeArea2"
+      ],
+      "roles": [
+        "legislatorLowerBody"
+      ],
+      "officialIndices": [
+        24,
+        25
+      ]
+    },
+    {
+      "name": "Wyandotte County-Kansas City Unified Government Commissioner",
+      "divisionId": "ocd-division/country:us/state:ks/county:wyandotte/council_district:2",
+      "levels": [
+        "administrativeArea2"
+      ],
+      "roles": [
+        "legislatorLowerBody"
+      ],
+      "officialIndices": [
+        26
+      ]
+    }
+  ],
+  "officials": [
+    {
+      "name": "Joseph R. Biden",
+      "address": [
+        {
+          "line1": "1600 Pennsylvania Avenue Northwest",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20500"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 456-1111"
+      ],
+      "urls": [
+        "https://www.whitehouse.gov/",
+        "https://en.wikipedia.org/wiki/Joe_Biden"
+      ],
+      "channels": [
+        {
+          "type": "Twitter",
+          "id": "potus"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "The White House 1600 Pennsylvania Avenue NW Washington, DC 20500",
+          "featureId": {
+            "cellId": "9923602325795527449",
+            "fprint": "11513381022022344111"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 126.14545494347092,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Kamala D. Harris",
+      "address": [
+        {
+          "line1": "1600 Pennsylvania Avenue Northwest",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20500"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 456-1111"
+      ],
+      "urls": [
+        "https://www.whitehouse.gov/",
+        "https://en.wikipedia.org/wiki/Kamala_Harris"
+      ],
+      "channels": [
+        {
+          "type": "Twitter",
+          "id": "VP"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "The White House 1600 Pennsylvania Avenue NW Washington, DC 20500",
+          "featureId": {
+            "cellId": "9923602325795527449",
+            "fprint": "11513381022022344111"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 126.14545494347092,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Jerry Moran",
+      "address": [
+        {
+          "line1": "521 Dirksen Senate Office Building",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20510"
+        }
+      ],
+      "party": "Republican Party",
+      "phones": [
+        "(202) 224-6521"
+      ],
+      "urls": [
+        "https://www.moran.senate.gov/",
+        "https://en.wikipedia.org/wiki/Jerry_Moran"
+      ],
+      "photoUrl": "http://bioguide.congress.gov/bioguide/photo/M/M000934.jpg",
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "jerrymoran"
+        },
+        {
+          "type": "Twitter",
+          "id": "JerryMoran"
+        },
+        {
+          "type": "YouTube",
+          "id": "SenatorJerryMoran"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "521 Dirksen Senate Office Building, Washington DC 20510",
+          "featureId": {
+            "cellId": "9923602661160726555",
+            "fprint": "13491012159388313795"
+          },
+          "featureType": "typePostalCode",
+          "positionPrecisionMeters": 500,
+          "addressUnderstood": false
+        }
+      ]
+    },
+    {
+      "name": "Roger Marshall",
+      "address": [
+        {
+          "line1": "B33",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20510"
+        }
+      ],
+      "party": "Republican Party",
+      "phones": [
+        "(202) 224-4774"
+      ],
+      "urls": [
+        "https://www.marshall.senate.gov/",
+        "https://en.wikipedia.org/wiki/Roger_Marshall_%28politician%29"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "RogerMarshallMD"
+        },
+        {
+          "type": "Twitter",
+          "id": "repmarshall"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "B33 Russell Senate Office Building Washington DC 20510",
+          "featureId": {
+            "cellId": "9923602777983093035",
+            "fprint": "16754435804240149550"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 154.99767133790925,
+          "addressUnderstood": false
+        }
+      ]
+    },
+    {
+      "name": "Sharice Davids",
+      "address": [
+        {
+          "line1": "1541 Longworth House Office Building",
+          "city": "Washington",
+          "state": "DC",
+          "zip": "20515"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(202) 225-2865"
+      ],
+      "urls": [
+        "https://davids.house.gov/",
+        "https://en.wikipedia.org/wiki/Sharice_Davids"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "RepDavids"
+        },
+        {
+          "type": "Twitter",
+          "id": "RepDavids"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "1541 Longworth House Office Building, Washington, DC 20515-1603",
+          "featureId": {
+            "cellId": "9923602795423060423",
+            "fprint": "18411854889169102830"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 123.49476568652042,
+          "addressUnderstood": false
+        }
+      ]
+    },
+    {
+      "name": "Laura Kelly",
+      "address": [
+        {
+          "line1": "300 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(785) 296-3232"
+      ],
+      "urls": [
+        "https://governor.kansas.gov/",
+        "https://en.wikipedia.org/wiki/Laura_Kelly"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "GovLauraKelly"
+        },
+        {
+          "type": "Twitter",
+          "id": "GovLauraKelly"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "300 SW 10th Ave, Ste 241S, Topeka, KS 66612-1590",
+          "featureId": {
+            "cellId": "9781540237020918579",
+            "fprint": "9784489181399426589"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 122.21857349675197,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "David Toland",
+      "address": [
+        {
+          "line1": "300 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(785) 296-3232"
+      ],
+      "urls": [
+        "https://governor.kansas.gov/about-the-office/lt-governor/",
+        "https://en.wikipedia.org/wiki/David_Toland"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "LtGovDavidToland"
+        },
+        {
+          "type": "Twitter",
+          "id": "LtGovToland"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "300 SW 10th Ave, Ste 241S, Topeka, KS 66612-1590",
+          "featureId": {
+            "cellId": "9781540237020918579",
+            "fprint": "9784489181399426589"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 122.21857349675197,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Derek Schmidt",
+      "address": [
+        {
+          "line1": "120 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Republican Party",
+      "phones": [
+        "(785) 296-2215"
+      ],
+      "urls": [
+        "https://ag.ks.gov/",
+        "https://en.wikipedia.org/wiki/Derek_Schmidt"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "120 SW 10th Ave, 2nd Floor, Topeka, KS 66612-1597",
+          "featureId": {
+            "cellId": "9781540283247039853",
+            "fprint": "15623853065145397449"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 47.173995692483565,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Scott Schwab",
+      "address": [
+        {
+          "line1": "120 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Republican Party",
+      "phones": [
+        "(785) 296-4564"
+      ],
+      "urls": [
+        "https://sos.kansas.gov/",
+        "https://en.wikipedia.org/wiki/Scott_Schwab"
+      ],
+      "emails": [
+        "sos@ks.gov"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "120 SW 10th Ave, 1st Floor, Topeka, KS 66612-1594",
+          "featureId": {
+            "cellId": "9781540283247039853",
+            "fprint": "17896977689247861646"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 47.173995692483565,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Lynn Rogers",
+      "address": [
+        {
+          "line1": "900 Southwest Jackson Street",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(785) 296-3171"
+      ],
+      "urls": [
+        "https://kansasstatestatetreasurer.com/",
+        "https://en.wikipedia.org/wiki/Lynn_Rogers_%28politician%29"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "900 SW Jackson St, Ste 201, Topeka, KS 66612",
+          "featureId": {
+            "cellId": "9781540283400323073",
+            "fprint": "1861329514799730520"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Vicki Schmidt",
+      "address": [
+        {
+          "line1": "1300 Southwest Arrowhead Road",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66604"
+        }
+      ],
+      "party": "Republican Party",
+      "phones": [
+        "(785) 296-3071"
+      ],
+      "urls": [
+        "https://insurance.kansas.gov/",
+        "https://en.wikipedia.org/wiki/Vicki_Schmidt"
+      ],
+      "emails": [
+        "kid.commissioner@ks.gov"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "1300 SW Arrowhead Rd, Topeka, KS 66604-4073",
+          "featureId": {
+            "cellId": "9781533694237569297",
+            "fprint": "13483554299371173898"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 41.330898474284247,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Pat Pettey",
+      "address": [
+        {
+          "line1": "300 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(785) 296-7375"
+      ],
+      "urls": [
+        "http://www.kslegislature.org/li/b2021_22/members/sen_pettey_pat_1/",
+        "https://en.wikipedia.org/wiki/Pat_Pettey"
+      ],
+      "photoUrl": "http://www.kslegislature.org/li/m/images/pics/sen_pettey_pat_1.jpg",
+      "emails": [
+        "pat.pettey@senate.ks.gov"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "Senator-Pat-Pettey-178776246078623"
+        },
+        {
+          "type": "Twitter",
+          "id": "senatorpettey"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "300 SW 10TH AVE RM 125-E, TOPEKA KS 66612",
+          "featureId": {
+            "cellId": "9781540237020918579",
+            "fprint": "11578770476541923025"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 122.21857349675197,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Pam Curtis",
+      "address": [
+        {
+          "line1": "300 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Democratic Party",
+      "phones": [
+        "(785) 296-7430"
+      ],
+      "urls": [
+        "http://www.kslegislature.org/li/b2021_22/members/rep_curtis_pam_1/",
+        "https://en.wikipedia.org/wiki/Pam_Curtis"
+      ],
+      "photoUrl": "http://www.kslegislature.org/li/m/images/pics/rep_curtis_pam_1.jpg",
+      "emails": [
+        "pam.curtis@house.ks.gov"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "PamCurtisKCK"
+        },
+        {
+          "type": "Twitter",
+          "id": "pcurtiskck"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "300 SW 10TH AVE RM 452-S, TOPEKA KS 66612",
+          "featureId": {
+            "cellId": "9781540237020918579",
+            "fprint": "3862814771243569279"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 122.21857349675197,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Caleb Stegall",
+      "address": [
+        {
+          "line1": "301 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(785) 296-3229"
+      ],
+      "urls": [
+        "https://www.kscourts.org/About-the-Courts/Supreme-Court",
+        "https://en.wikipedia.org/wiki/Daniel_Biles"
+      ],
+      "emails": [
+        "info@kscourts.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "301 SW 10th Ave, Topeka, KS 66612-1507",
+          "featureId": {
+            "cellId": "9781540329930094289",
+            "fprint": "13838739674425471381"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 69.840206021355684,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Dan Biles",
+      "address": [
+        {
+          "line1": "301 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(785) 296-3229"
+      ],
+      "urls": [
+        "https://www.kscourts.org/About-the-Courts/Supreme-Court",
+        "https://en.wikipedia.org/wiki/Daniel_Biles"
+      ],
+      "emails": [
+        "info@kscourts.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "301 SW 10th Ave, Topeka, KS 66612-1507",
+          "featureId": {
+            "cellId": "9781540329930094289",
+            "fprint": "13838739674425471381"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 69.840206021355684,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Eric S. Rosen",
+      "address": [
+        {
+          "line1": "301 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(785) 296-3229"
+      ],
+      "urls": [
+        "https://www.kscourts.org/About-the-Courts/Supreme-Court",
+        "https://en.wikipedia.org/wiki/Eric_Rosen"
+      ],
+      "emails": [
+        "info@kscourts.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "301 SW 10th Ave, Topeka, KS 66612-1507",
+          "featureId": {
+            "cellId": "9781540329930094289",
+            "fprint": "13838739674425471381"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 69.840206021355684,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Evelyn Z. Wilson",
+      "address": [
+        {
+          "line1": "301 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(785) 296-3229"
+      ],
+      "urls": [
+        "https://www.kscourts.org/About-the-Courts/Supreme-Court",
+        "https://en.wikipedia.org/wiki/Lee_A._Johnson"
+      ],
+      "emails": [
+        "info@kscourts.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "301 SW 10th Ave, Topeka, KS 66612-1507",
+          "featureId": {
+            "cellId": "9781540329930094289",
+            "fprint": "13838739674425471381"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 69.840206021355684,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Keynen \"KJ\" Wall, Jr.",
+      "address": [
+        {
+          "line1": "301 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(785) 296-3229"
+      ],
+      "urls": [
+        "https://www.kscourts.org/About-the-Courts/Supreme-Court",
+        "https://en.wikipedia.org/wiki/K.J._Wall"
+      ],
+      "emails": [
+        "info@kscourts.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "301 SW 10th Ave, Topeka, KS 66612-1507",
+          "featureId": {
+            "cellId": "9781540329930094289",
+            "fprint": "13838739674425471381"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 69.840206021355684,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Marla Luckert",
+      "address": [
+        {
+          "line1": "301 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(785) 296-3229"
+      ],
+      "urls": [
+        "https://www.kscourts.org/About-the-Courts/Supreme-Court",
+        "https://en.wikipedia.org/wiki/Marla_Luckert"
+      ],
+      "emails": [
+        "info@kscourts.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "301 SW 10th Ave, Topeka, KS 66612-1507",
+          "featureId": {
+            "cellId": "9781540329930094289",
+            "fprint": "13838739674425471381"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 69.840206021355684,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Melissa Taylor Standridge",
+      "address": [
+        {
+          "line1": "301 Southwest 10th Avenue",
+          "city": "Topeka",
+          "state": "KS",
+          "zip": "66612"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(785) 296-3229"
+      ],
+      "urls": [
+        "https://www.kscourts.org/About-the-Courts/Supreme-Court",
+        "https://en.wikipedia.org/wiki/Melissa_Standridge"
+      ],
+      "emails": [
+        "info@kscourts.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "301 SW 10th Ave, Topeka, KS 66612-1507",
+          "featureId": {
+            "cellId": "9781540329930094289",
+            "fprint": "13838739674425471381"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 69.840206021355684,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "David Alvey",
+      "address": [
+        {
+          "line1": "701 North 7th Street Trafficway",
+          "city": "Kansas City",
+          "state": "KS",
+          "zip": "66101"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(913) 573-5010"
+      ],
+      "urls": [
+        "https://www.wycokck.org/Mayor.aspx"
+      ],
+      "emails": [
+        "dalvey@wycokck.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "701 N 7th St, Suite 926 Kansas City, KS 66101",
+          "featureId": {
+            "cellId": "9782083865905205513",
+            "fprint": "17007492610138165754"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Nancy W. Burns",
+      "address": [
+        {
+          "line1": "701 North 7th Street Trafficway",
+          "city": "Kansas City",
+          "state": "KS",
+          "zip": "66101"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(913) 573-2841"
+      ],
+      "urls": [
+        "https://www.wycokck.org/Register-of-Deeds.aspx"
+      ],
+      "emails": [
+        "nburns@wycokck.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "701 N 7th St, Suite 100 Kansas City, KS 66101",
+          "featureId": {
+            "cellId": "9782083865905205513",
+            "fprint": "682211012438589129"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Donald Ash",
+      "address": [
+        {
+          "line1": "710 North 7th Street Trafficway",
+          "city": "Kansas City",
+          "state": "KS",
+          "zip": "66101"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(913) 573-2861"
+      ],
+      "urls": [
+        "https://www.wycokck.org/Sheriff.aspx"
+      ],
+      "emails": [
+        "dash@wycokck.org"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "Sheriffnumber1"
+        },
+        {
+          "type": "Twitter",
+          "id": "wycosheriff"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "710 N 7th St., Kansas City, KS 66101",
+          "featureId": {
+            "cellId": "9782083863665059609",
+            "fprint": "866054245527060717"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 65.758709864627988,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Mark A. Dupree, Sr.",
+      "address": [
+        {
+          "line1": "710 North 7th Street Trafficway",
+          "city": "Kansas City",
+          "state": "KS",
+          "zip": "66101"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(913) 573-2851"
+      ],
+      "urls": [
+        "https://www.wycokck.org/DA.aspx"
+      ],
+      "channels": [
+        {
+          "type": "Facebook",
+          "id": "WYCODAOffice"
+        },
+        {
+          "type": "Twitter",
+          "id": "wycodaoffice"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "710 N 7th St Kansas City, KS 66101",
+          "featureId": {
+            "cellId": "9782083863665059609",
+            "fprint": "866054245527060717"
+          },
+          "featureType": "typeCompoundBuilding",
+          "positionPrecisionMeters": 65.758709864627988,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Melissa Bynum",
+      "address": [
+        {
+          "line1": "701 North 7th Street Trafficway",
+          "city": "Kansas City",
+          "state": "KS",
+          "zip": "66101"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(913) 573-5040"
+      ],
+      "urls": [
+        "https://www.wycokck.org/Commissioners/Districts.aspx"
+      ],
+      "emails": [
+        "mbynum@wycokck.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "701 N 7th St, Suite 979, Kansas City, KS 66101",
+          "featureId": {
+            "cellId": "9782083865905205513",
+            "fprint": "18406610273417966850"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Tom Burroughs",
+      "address": [
+        {
+          "line1": "701 North 7th Street Trafficway",
+          "city": "Kansas City",
+          "state": "KS",
+          "zip": "66101"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(913) 573-5040"
+      ],
+      "urls": [
+        "https://www.wycokck.org/Commissioners/Districts.aspx"
+      ],
+      "emails": [
+        "tburroughs@wycokck.org"
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "701 N 7th St, Suite 979, Kansas City, KS 66101",
+          "featureId": {
+            "cellId": "9782083865905205513",
+            "fprint": "18406610273417966850"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    },
+    {
+      "name": "Brian McKiernan",
+      "address": [
+        {
+          "line1": "701 North 7th Street Trafficway",
+          "city": "Kansas City",
+          "state": "KS",
+          "zip": "66101"
+        }
+      ],
+      "party": "Nonpartisan",
+      "phones": [
+        "(913) 573-5040"
+      ],
+      "urls": [
+        "https://www.wycokck.org/Commissioners/Districts.aspx"
+      ],
+      "emails": [
+        "bmckiernan@wycokck.org"
+      ],
+      "channels": [
+        {
+          "type": "Twitter",
+          "id": "bmckiernan_ug2"
+        }
+      ],
+      "geocodingSummaries": [
+        {
+          "queryString": "701 N 7th St, Suite 979, Kansas City, KS 66101",
+          "featureId": {
+            "cellId": "9782083865905205513",
+            "fprint": "18406610273417966850"
+          },
+          "featureType": "typeCompoundSection",
+          "positionPrecisionMeters": 0,
+          "addressUnderstood": true
+        }
+      ]
+    }
+  ]
+}

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		832FAEE827908185003E39EB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 832FAEE727908185003E39EB /* GoogleService-Info.plist */; };
 		832FAEEA27908B12003E39EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FAEE927908B11003E39EB /* ProfileViewController.swift */; };
 		83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1C278FC0AB00F4D385 /* LoginViewController.swift */; };
 		83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1E278FC17500F4D385 /* RegisterViewController.swift */; };
+		8371CEC12790914900C8EAA9 /* RepsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8371CEC02790914900C8EAA9 /* RepsData.swift */; };
 		83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC73278F72CF002CE83E /* AppDelegate.swift */; };
 		83B7FC76278F72CF002CE83E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC75278F72CF002CE83E /* SceneDelegate.swift */; };
 		83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC77278F72CF002CE83E /* ViewController.swift */; };
@@ -23,6 +23,18 @@
 		83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCA8278FA559002CE83E /* ElectionManager.swift */; };
 		83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCAA278FA574002CE83E /* RepsManager.swift */; };
 		83B7FCAD278FA63B002CE83E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCAC278FA63B002CE83E /* Constants.swift */; };
+		83B8D17B2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */; };
+		83B8D17C2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */; };
+		83B8D17D2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */; };
+		83B8D17F2791CE3800EE99E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */; };
+		83B8D1802791CE3800EE99E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */; };
+		83B8D1812791CE3800EE99E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */; };
+		83B8D1832791D2AB00EE99E0 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D1822791D2AB00EE99E0 /* AddressData.swift */; };
+		83B8D1842791D2AB00EE99E0 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D1822791D2AB00EE99E0 /* AddressData.swift */; };
+		83B8D1852791D2AB00EE99E0 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D1822791D2AB00EE99E0 /* AddressData.swift */; };
+		83B8D1872791E0EE00EE99E0 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 83B8D1862791E0EE00EE99E0 /* test.json */; };
+		83B8D1882791E0EE00EE99E0 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 83B8D1862791E0EE00EE99E0 /* test.json */; };
+		83B8D1892791E0EE00EE99E0 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 83B8D1862791E0EE00EE99E0 /* test.json */; };
 		9ABACB5DA97E22C12C0DCEE5 /* Pods_Civic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA39D2885B6095CB2D4D1C1B /* Pods_Civic.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,10 +57,10 @@
 
 /* Begin PBXFileReference section */
 		063E95E8DEF524856DC19368 /* Pods-Civic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Civic.release.xcconfig"; path = "Target Support Files/Pods-Civic/Pods-Civic.release.xcconfig"; sourceTree = "<group>"; };
-		832FAEE727908185003E39EB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		832FAEE927908B11003E39EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		83339B1C278FC0AB00F4D385 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83339B1E278FC17500F4D385 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8371CEC02790914900C8EAA9 /* RepsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsData.swift; sourceTree = "<group>"; };
 		83B7FC70278F72CF002CE83E /* Civic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Civic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B7FC73278F72CF002CE83E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B7FC75278F72CF002CE83E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +78,10 @@
 		83B7FCA8278FA559002CE83E /* ElectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionManager.swift; sourceTree = "<group>"; };
 		83B7FCAA278FA574002CE83E /* RepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsManager.swift; sourceTree = "<group>"; };
 		83B7FCAC278FA63B002CE83E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		83B8D1822791D2AB00EE99E0 /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
+		83B8D1862791E0EE00EE99E0 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		AA39D2885B6095CB2D4D1C1B /* Pods_Civic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Civic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48E18F60AF3323B68E652F1 /* Pods-Civic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Civic.debug.xcconfig"; path = "Target Support Files/Pods-Civic/Pods-Civic.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +155,8 @@
 				83B7FC7C278F72D0002CE83E /* Assets.xcassets */,
 				83B7FCAC278FA63B002CE83E /* Constants.swift */,
 				83B7FC81278F72D0002CE83E /* Info.plist */,
-				832FAEE727908185003E39EB /* GoogleService-Info.plist */,
+				83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */,
+				83B8D1862791E0EE00EE99E0 /* test.json */,
 			);
 			path = Civic;
 			sourceTree = "<group>";
@@ -166,6 +183,8 @@
 			children = (
 				83B7FCA8278FA559002CE83E /* ElectionManager.swift */,
 				83B7FCAA278FA574002CE83E /* RepsManager.swift */,
+				8371CEC02790914900C8EAA9 /* RepsData.swift */,
+				83B8D1822791D2AB00EE99E0 /* AddressData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +205,7 @@
 				83339B1C278FC0AB00F4D385 /* LoginViewController.swift */,
 				83339B1E278FC17500F4D385 /* RegisterViewController.swift */,
 				832FAEE927908B11003E39EB /* ProfileViewController.swift */,
+				83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -209,15 +229,13 @@
 				83B7FC6C278F72CF002CE83E /* Sources */,
 				83B7FC6D278F72CF002CE83E /* Frameworks */,
 				83B7FC6E278F72CF002CE83E /* Resources */,
-				97D50FA1D601C209FE739DC3 /* [CP] Embed Pods Frameworks */,
+				5060A33BEADA5A065D75EFE0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Civic;
-			packageProductDependencies = (
-			);
 			productName = Civic;
 			productReference = 83B7FC70278F72CF002CE83E /* Civic.app */;
 			productType = "com.apple.product-type.application";
@@ -290,8 +308,6 @@
 				Base,
 			);
 			mainGroup = 83B7FC67278F72CF002CE83E;
-			packageReferences = (
-			);
 			productRefGroup = 83B7FC71278F72CF002CE83E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -309,7 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B7FC80278F72D0002CE83E /* LaunchScreen.storyboard in Resources */,
-				832FAEE827908185003E39EB /* GoogleService-Info.plist in Resources */,
+				83B8D17B2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */,
+				83B8D1872791E0EE00EE99E0 /* test.json in Resources */,
 				83B7FC7D278F72D0002CE83E /* Assets.xcassets in Resources */,
 				83B7FC7B278F72CF002CE83E /* Main.storyboard in Resources */,
 			);
@@ -319,6 +336,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B8D17C2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */,
+				83B8D1882791E0EE00EE99E0 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,12 +345,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B8D17D2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */,
+				83B8D1892791E0EE00EE99E0 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5060A33BEADA5A065D75EFE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8A30CEF6109F7766E4C9E811 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -354,23 +392,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97D50FA1D601C209FE739DC3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Civic/Pods-Civic-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -378,12 +399,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B8D1832791D2AB00EE99E0 /* AddressData.swift in Sources */,
 				83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */,
 				83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */,
 				83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */,
+				8371CEC12790914900C8EAA9 /* RepsData.swift in Sources */,
 				83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */,
 				83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */,
 				83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */,
+				83B8D17F2791CE3800EE99E0 /* HomeViewController.swift in Sources */,
 				832FAEEA27908B12003E39EB /* ProfileViewController.swift in Sources */,
 				83B7FC76278F72CF002CE83E /* SceneDelegate.swift in Sources */,
 				83B7FCAD278FA63B002CE83E /* Constants.swift in Sources */,
@@ -394,7 +418,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B8D1842791D2AB00EE99E0 /* AddressData.swift in Sources */,
 				83B7FC8B278F72D1002CE83E /* CivicTests.swift in Sources */,
+				83B8D1802791CE3800EE99E0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,8 +428,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83B8D1852791D2AB00EE99E0 /* AddressData.swift in Sources */,
 				83B7FC95278F72D1002CE83E /* CivicUITests.swift in Sources */,
 				83B7FC97278F72D1002CE83E /* CivicUITestsLaunchTests.swift in Sources */,
+				83B8D1812791CE3800EE99E0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,10 +522,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = com.cmarshallmoriarty.civic;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.civic;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -550,9 +580,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = com.cmarshallmoriarty.civic;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.civic;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -629,7 +661,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.CivicTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.Civic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -649,7 +681,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.CivicTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.Civic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -667,7 +699,7 @@
 				DEVELOPMENT_TEAM = 7WFANUX65T;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.CivicUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.civic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -685,7 +717,7 @@
 				DEVELOPMENT_TEAM = 7WFANUX65T;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.CivicUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.civic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;

@@ -1,9 +1,11 @@
-Config.xcconfig
-
+*.xcconfig
+/Civic/*.plist
 .DS_Store
 Pods/
 xcuserdata/
 *.xcworkspace/
-GoogleService-Info.plist
+/*GoogleService-Info.plist
 Secrets
 Secrets.tar
+*.plist
+*GoogleService-Info

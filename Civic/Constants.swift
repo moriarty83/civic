@@ -12,4 +12,14 @@ struct K {
     struct Reps {
         static let api_key = Bundle.main.infoDictionary?["CIVIC_KEY"] as? String
     }
+    
+    struct FStore {
+        
+        static let collectionName = "addresses"
+        static let userIdField = "user_id"
+        static let addressField = "address"
+        static let cityField = "city"
+        static let stateField = "state"
+        static let zipField = "zip"
+    }
 }

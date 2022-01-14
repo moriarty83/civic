@@ -7,8 +7,12 @@
 
 import Foundation
 
+protocol RepsManagerDelegate{
+    func didUpdateRate(_ repsManager: RepsManager, repsData: RepsData)
+}
+
 struct RepsManager {
-//    var delegate: RepManagerDelegate?
+    var delegate: RepsManagerDelegate?
     
     let key = K.Reps.api_key! as String
 
@@ -25,14 +29,29 @@ struct RepsManager {
                     print(error as Any)
                     return
                 }
-                let json = try? JSONSerialization.jsonObject(with: data!, options: [])
-                print(response)
-                print(json)
+                if let safeData = data {
+                    self.delegate?.didUpdateRate(self, repsData: self.parseJSON(safeData)!)
+                }
             }
             task.resume()
         }
     }
+    
+    func parseJSON(_ data: Data)->RepsData?{
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(RepsData.self, from: data)
+            return decodedData
+            
+        }
+        catch{
+            print(error)
+            return nil
+        }
+    }
 }
+
+
     
         
 
