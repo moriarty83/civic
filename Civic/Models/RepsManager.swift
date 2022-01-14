@@ -8,11 +8,13 @@
 import Foundation
 
 protocol RepsManagerDelegate{
-    func didUpdateRate(_ repsManager: RepsManager, repsData: RepsData)
+    func didUpdateReps(_ repsManager: RepsManager, repsData: RepsData)
 }
 
 struct RepsManager {
     var delegate: RepsManagerDelegate?
+    
+    var repsData: RepsData?
     
     let key = K.Reps.api_key! as String
 
@@ -30,7 +32,7 @@ struct RepsManager {
                     return
                 }
                 if let safeData = data {
-                    self.delegate?.didUpdateRate(self, repsData: self.parseJSON(safeData)!)
+                    self.delegate?.didUpdateReps(self, repsData: self.parseJSON(safeData)!)
                 }
             }
             task.resume()
