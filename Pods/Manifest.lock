@@ -218,6 +218,7 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
+  - BTNavigationDropdownMenu (0.7)
   - Firebase/Auth (6.34.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.9.2)
@@ -303,16 +304,20 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
+  - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - BTNavigationDropdownMenu
   - Firebase/Auth
   - Firebase/Firestore
   - FirebaseFirestoreSwift
+  - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - abseil
     - BoringSSL-GRPC
+    - BTNavigationDropdownMenu
     - Firebase
     - FirebaseAuth
     - FirebaseCore
@@ -327,10 +332,12 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
+  BTNavigationDropdownMenu: 57a72c74dc211db3564f5be168f4f7643491a7de
   Firebase: c23a36d9e4cdf7877dfcba8dd0c58add66358999
   FirebaseAuth: c92d49ada7948d1a23466e3db17bc4c2039dddc3
   FirebaseCore: d3a978a3cfa3240bf7e4ba7d137fdf5b22b628ec
@@ -345,7 +352,8 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: 59317e09cf1f1a0af72f12af412d54edf52603fc
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: aa9a9804381c0f6a8321ac11968f02f5c1ebb1d8
+PODFILE CHECKSUM: e6b442b9bc293f63c1fbdd6abfba9757e7a47332
 
 COCOAPODS: 1.11.2

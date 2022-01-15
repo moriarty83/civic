@@ -10,5 +10,6 @@ target 'Civic' do
 
   # Optionally, include the Swift extensions if you're using Swift.
   pod 'FirebaseFirestoreSwift'
-  
+  pod 'SwiftyJSON', '~> 4.0'
+  pod 'BTNavigationDropdownMenu'
 end

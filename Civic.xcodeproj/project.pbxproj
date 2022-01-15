@@ -10,7 +10,9 @@
 		832FAEEA27908B12003E39EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FAEE927908B11003E39EB /* ProfileViewController.swift */; };
 		83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1C278FC0AB00F4D385 /* LoginViewController.swift */; };
 		83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1E278FC17500F4D385 /* RegisterViewController.swift */; };
-		8371CEC12790914900C8EAA9 /* RepsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8371CEC02790914900C8EAA9 /* RepsData.swift */; };
+		8371CEC12790914900C8EAA9 /* RepsDecoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8371CEC02790914900C8EAA9 /* RepsDecoded.swift */; };
+		83A2FD32279246D2002E3F0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */; };
+		83A2FD3427931ACC002E3F0B /* RepsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2FD3327931ACC002E3F0B /* RepsData.swift */; };
 		83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC73278F72CF002CE83E /* AppDelegate.swift */; };
 		83B7FC76278F72CF002CE83E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC75278F72CF002CE83E /* SceneDelegate.swift */; };
 		83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC77278F72CF002CE83E /* ViewController.swift */; };
@@ -23,9 +25,6 @@
 		83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCA8278FA559002CE83E /* ElectionManager.swift */; };
 		83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCAA278FA574002CE83E /* RepsManager.swift */; };
 		83B7FCAD278FA63B002CE83E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCAC278FA63B002CE83E /* Constants.swift */; };
-		83B8D17B2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */; };
-		83B8D17C2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */; };
-		83B8D17D2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */; };
 		83B8D17F2791CE3800EE99E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */; };
 		83B8D1802791CE3800EE99E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */; };
 		83B8D1812791CE3800EE99E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */; };
@@ -60,7 +59,9 @@
 		832FAEE927908B11003E39EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		83339B1C278FC0AB00F4D385 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83339B1E278FC17500F4D385 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		8371CEC02790914900C8EAA9 /* RepsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsData.swift; sourceTree = "<group>"; };
+		8371CEC02790914900C8EAA9 /* RepsDecoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsDecoded.swift; sourceTree = "<group>"; };
+		83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		83A2FD3327931ACC002E3F0B /* RepsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsData.swift; sourceTree = "<group>"; };
 		83B7FC70278F72CF002CE83E /* Civic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Civic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B7FC73278F72CF002CE83E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B7FC75278F72CF002CE83E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		83B7FCA8278FA559002CE83E /* ElectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionManager.swift; sourceTree = "<group>"; };
 		83B7FCAA278FA574002CE83E /* RepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsManager.swift; sourceTree = "<group>"; };
 		83B7FCAC278FA63B002CE83E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		83B8D1822791D2AB00EE99E0 /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
 		83B8D1862791E0EE00EE99E0 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 				83B7FC7C278F72D0002CE83E /* Assets.xcassets */,
 				83B7FCAC278FA63B002CE83E /* Constants.swift */,
 				83B7FC81278F72D0002CE83E /* Info.plist */,
-				83B8D17A2791C9F100EE99E0 /* GoogleService-Info.plist */,
+				83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */,
 				83B8D1862791E0EE00EE99E0 /* test.json */,
 			);
 			path = Civic;
@@ -183,7 +183,8 @@
 			children = (
 				83B7FCA8278FA559002CE83E /* ElectionManager.swift */,
 				83B7FCAA278FA574002CE83E /* RepsManager.swift */,
-				8371CEC02790914900C8EAA9 /* RepsData.swift */,
+				8371CEC02790914900C8EAA9 /* RepsDecoded.swift */,
+				83A2FD3327931ACC002E3F0B /* RepsData.swift */,
 				83B8D1822791D2AB00EE99E0 /* AddressData.swift */,
 			);
 			path = Models;
@@ -325,9 +326,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B7FC80278F72D0002CE83E /* LaunchScreen.storyboard in Resources */,
-				83B8D17B2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */,
 				83B8D1872791E0EE00EE99E0 /* test.json in Resources */,
 				83B7FC7D278F72D0002CE83E /* Assets.xcassets in Resources */,
+				83A2FD32279246D2002E3F0B /* GoogleService-Info.plist in Resources */,
 				83B7FC7B278F72CF002CE83E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +337,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B8D17C2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */,
 				83B8D1882791E0EE00EE99E0 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,7 +345,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83B8D17D2791C9F100EE99E0 /* GoogleService-Info.plist in Resources */,
 				83B8D1892791E0EE00EE99E0 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,12 +402,13 @@
 				83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */,
 				83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */,
 				83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */,
-				8371CEC12790914900C8EAA9 /* RepsData.swift in Sources */,
+				8371CEC12790914900C8EAA9 /* RepsDecoded.swift in Sources */,
 				83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */,
 				83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */,
 				83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */,
 				83B8D17F2791CE3800EE99E0 /* HomeViewController.swift in Sources */,
 				832FAEEA27908B12003E39EB /* ProfileViewController.swift in Sources */,
+				83A2FD3427931ACC002E3F0B /* RepsData.swift in Sources */,
 				83B7FC76278F72CF002CE83E /* SceneDelegate.swift in Sources */,
 				83B7FCAD278FA63B002CE83E /* Constants.swift in Sources */,
 			);

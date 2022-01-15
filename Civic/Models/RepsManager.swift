@@ -6,15 +6,18 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 protocol RepsManagerDelegate{
-    func didUpdateReps(_ repsManager: RepsManager, repsData: RepsData)
+    func didUpdateReps(_ repsManager: RepsManager, reps: [[String: String]])
 }
 
 struct RepsManager {
     var delegate: RepsManagerDelegate?
     
-    var repsData: RepsData?
+    var reps: [[String: String]]?
+    
+    var repsDecoded: RepsDecoded?
     
     let key = K.Reps.api_key! as String
 
@@ -32,17 +35,17 @@ struct RepsManager {
                     return
                 }
                 if let safeData = data {
-                    self.delegate?.didUpdateReps(self, repsData: self.parseJSON(safeData)!)
+                    self.delegate?.didUpdateReps(self, reps: self.swiftyJson(safeData))
                 }
             }
             task.resume()
         }
     }
     
-    func parseJSON(_ data: Data)->RepsData?{
+    func parseJSON(_ data: Data)->RepsDecoded?{
         let decoder = JSONDecoder()
         do {
-            let decodedData = try decoder.decode(RepsData.self, from: data)
+            let decodedData = try decoder.decode(RepsDecoded.self, from: data)
             return decodedData
             
         }
@@ -51,7 +54,41 @@ struct RepsManager {
             return nil
         }
     }
+    
+    func swiftyJson(_ dataFromNetworking: Data)-> [[String:String]]{
+        var officials: [[String:String]] = []
+        do {
+        let json = try JSON(data: dataFromNetworking)
+        print("Swifty JSON")
+
+            print(type(of: json["officials"]))
+            let officalNames =  json["officials"].arrayValue.map {$0["name"].stringValue}
+            let officalParty =  json["officials"].arrayValue.map {$0["party"].stringValue}
+
+            
+            for (key,office):(String, JSON) in json["offices"] {
+                
+                for (key, value) in office["officialIndices"]{
+                    let index: Int = Int(value.rawString()!)!
+//                    print(officalNames[index])
+//                    print(office["name"])
+                    officials.append(["name": officalNames[index], "office": office["name"].stringValue,  "party": officalParty[index]])
+
+                }
+            }
+        }
+        catch{
+            print(error)
+
+        }
+        return officials
+        
+    }
+    
+    func createRepsData(decodedReps: RepsDecoded){}
+    
 }
+
 
 
     
