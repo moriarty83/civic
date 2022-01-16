@@ -17,7 +17,6 @@ struct RepsManager {
     
     var reps: [[String: String]]?
     
-    
     let key = K.Reps.api_key! as String
 
     var baseURL = "https://www.googleapis.com/civicinfo/v2/representatives?key="

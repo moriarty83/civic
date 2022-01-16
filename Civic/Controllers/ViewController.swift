@@ -12,7 +12,7 @@ import BTNavigationDropdownMenu
 
 class ViewController: UIViewController {
     
-    var menuItems = ["tom", "dick", "harry"]
+    var menuItems = ["Welcome"]
     
     let indexCount = 0
     
@@ -22,32 +22,31 @@ class ViewController: UIViewController {
     
     var repsManager = RepsManager()
     
+    var electionsManager = ElectionManager()
+    
     weak var handle: AuthStateDidChangeListenerHandle?
     
     var loggedIn = false
 
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var electionTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         repsManager.delegate = self
+        electionsManager.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        electionTableView.delegate = self
+        electionTableView.dataSource = self
 
-
-        
-        
-
-        
         var repURL = "\(repsManager.baseURL)\(repsManager.key)&address=\(addressString)"
 
         handle = Auth.auth().addStateDidChangeListener { [weak self] (auth, user) in
             if ((user) != nil) {
-                
                 self?.loggedIn = true
-
-                
                 self?.db.collection("addresses").document(user!.uid)
                     .addSnapshotListener { documentSnapshot, error in
                       guard let document = documentSnapshot else {
@@ -67,26 +66,21 @@ class ViewController: UIViewController {
                         print(repURL)
                         self!.repsManager.performRequest(with: repURL)
                         
-                      print("Current data: \(data["city"])")
                     }
               
             } else {
                 self?.loggedIn = false
-
                 }
-            
         }
-        
 
         repsManager.performRequest(with: repURL)
+        electionsManager.performRequest()
         tableView.reloadData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         // Nav Menu
-        
-//        menuView.updateItems(self!.menuItems)
-        if(self.loggedIn){
+                if(self.loggedIn){
             self.menuItems = ["Profile", "Logout"]
         }
         else{
@@ -94,26 +88,6 @@ class ViewController: UIViewController {
             
         }
         loadMenu()
-        
-//        let menuView = BTNavigationDropdownMenu(title: "Menu", items: menuItems)
-//
-//
-//        self.navigationItem.titleView = menuView
-//        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
-//        menuView.checkMarkImage = nil
-//        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
-//            print("Did select item  \(String(describing: self?.menuItems[indexPath]))")
-//            switch self?.menuItems[indexPath] {
-//                case "Profile":
-//                    self?.ViewProfile()
-//                case "Login":
-//                    self?.Login()
-//                case "Logout":
-//                    self?.Logout()
-//                default:
-//                    print("Enjoy your day!")
-//                }
-//        }
     }
 }
 
@@ -121,8 +95,17 @@ extension ViewController: RepsManagerDelegate{
     func didUpdateReps(_ repsManager: RepsManager, reps: [[String: String]]){
         self.repsManager.reps = reps
         DispatchQueue.main.async {
-            print("reloading data")
             self.tableView.reloadData()
+        }
+    }
+}
+
+extension ViewController: ElectionManagerDelegate{
+    func didUpdateElections(_ electionManager: ElectionManager, elections: [[String : String]]) {
+        self.electionsManager.elections = elections
+        print(elections)
+        DispatchQueue.main.async {
+            self.electionTableView.reloadData()
         }
     }
 }
@@ -131,9 +114,8 @@ extension ViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-
-
     }
+    
 }
 
 extension ViewController: UITableViewDataSource{
@@ -143,15 +125,36 @@ extension ViewController: UITableViewDataSource{
 //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.repsManager.reps?.count) ?? 0
+        if tableView == self.tableView {
+            return (self.repsManager.reps?.count) ?? 0
+        }
+        
+        if tableView == self.electionTableView {
+            return (self.electionsManager.elections?.count) ?? 0
+        }
+        else{
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = self.repsManager.reps?[indexPath.row]["name"]
-        cell.detailTextLabel?.text = self.repsManager.reps?[indexPath.row]["office"]
-        
-        return cell
+        if tableView == self.tableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.textLabel?.text = self.repsManager.reps?[indexPath.row]["name"]
+            cell.detailTextLabel?.text = self.repsManager.reps?[indexPath.row]["office"]
+            
+            return cell
+        }
+        if tableView == self.electionTableView {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "electionCell", for: indexPath)
+            cell.textLabel?.text = self.electionsManager.elections?[indexPath.row]["name"]
+            cell.detailTextLabel?.text = "Election Day: \(String(describing:  self.electionsManager.elections?[indexPath.row]["date"] ?? ""))"
+
+            return cell
+        }
+        else{
+            return tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        }
     }
 }
 
@@ -203,7 +206,7 @@ extension ViewController{
                     self?.Logout()
                 default:
                     print("Enjoy your day!")
-                }
+            }
         }
     }
 }
