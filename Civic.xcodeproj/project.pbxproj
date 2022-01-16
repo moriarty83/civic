@@ -10,7 +10,6 @@
 		832FAEEA27908B12003E39EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FAEE927908B11003E39EB /* ProfileViewController.swift */; };
 		83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1C278FC0AB00F4D385 /* LoginViewController.swift */; };
 		83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1E278FC17500F4D385 /* RegisterViewController.swift */; };
-		8371CEC12790914900C8EAA9 /* RepsDecoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8371CEC02790914900C8EAA9 /* RepsDecoded.swift */; };
 		83A2FD32279246D2002E3F0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */; };
 		83A2FD3427931ACC002E3F0B /* RepsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2FD3327931ACC002E3F0B /* RepsData.swift */; };
 		83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC73278F72CF002CE83E /* AppDelegate.swift */; };
@@ -59,7 +58,6 @@
 		832FAEE927908B11003E39EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		83339B1C278FC0AB00F4D385 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83339B1E278FC17500F4D385 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		8371CEC02790914900C8EAA9 /* RepsDecoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsDecoded.swift; sourceTree = "<group>"; };
 		83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83A2FD3327931ACC002E3F0B /* RepsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsData.swift; sourceTree = "<group>"; };
 		83B7FC70278F72CF002CE83E /* Civic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Civic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,7 +181,6 @@
 			children = (
 				83B7FCA8278FA559002CE83E /* ElectionManager.swift */,
 				83B7FCAA278FA574002CE83E /* RepsManager.swift */,
-				8371CEC02790914900C8EAA9 /* RepsDecoded.swift */,
 				83A2FD3327931ACC002E3F0B /* RepsData.swift */,
 				83B8D1822791D2AB00EE99E0 /* AddressData.swift */,
 			);
@@ -402,7 +399,6 @@
 				83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */,
 				83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */,
 				83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */,
-				8371CEC12790914900C8EAA9 /* RepsDecoded.swift in Sources */,
 				83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */,
 				83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */,
 				83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */,

@@ -17,7 +17,6 @@ struct RepsManager {
     
     var reps: [[String: String]]?
     
-    var repsDecoded: RepsDecoded?
     
     let key = K.Reps.api_key! as String
 
@@ -42,18 +41,6 @@ struct RepsManager {
         }
     }
     
-    func parseJSON(_ data: Data)->RepsDecoded?{
-        let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode(RepsDecoded.self, from: data)
-            return decodedData
-            
-        }
-        catch{
-            print(error)
-            return nil
-        }
-    }
     
     func swiftyJson(_ dataFromNetworking: Data)-> [[String:String]]{
         var officials: [[String:String]] = []
@@ -85,7 +72,6 @@ struct RepsManager {
         
     }
     
-    func createRepsData(decodedReps: RepsDecoded){}
     
 }
 

@@ -93,26 +93,27 @@ class ViewController: UIViewController {
             self.menuItems = ["Login", "Register", "Continue as Guest"]
             
         }
+        loadMenu()
         
-        let menuView = BTNavigationDropdownMenu(title: "Menu", items: menuItems)
-        
-        
-        self.navigationItem.titleView = menuView
-        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
-        menuView.checkMarkImage = nil
-        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
-            print("Did select item  \(String(describing: self?.menuItems[indexPath]))")
-            switch self?.menuItems[indexPath] {
-                case "Profile":
-                    self?.ViewProfile()
-                case "Login":
-                    self?.Login()
-                case "Logout":
-                    self?.Logout()
-                default:
-                    print("Enjoy your day!")
-                }
-        }
+//        let menuView = BTNavigationDropdownMenu(title: "Menu", items: menuItems)
+//
+//
+//        self.navigationItem.titleView = menuView
+//        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
+//        menuView.checkMarkImage = nil
+//        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+//            print("Did select item  \(String(describing: self?.menuItems[indexPath]))")
+//            switch self?.menuItems[indexPath] {
+//                case "Profile":
+//                    self?.ViewProfile()
+//                case "Login":
+//                    self?.Login()
+//                case "Logout":
+//                    self?.Logout()
+//                default:
+//                    print("Enjoy your day!")
+//                }
+//        }
     }
 }
 
@@ -170,13 +171,39 @@ extension ViewController{
     }
     
     func Logout(){
-            let firebaseAuth = Auth.auth()
+        print("logging out")
+        let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
             self.viewWillAppear(true)
+            self.menuItems = ["Login", "Register", "Continue as Guest"]
             
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
+        }
+        loadMenu()
+    }
+    
+    func loadMenu(){
+        let menuView = BTNavigationDropdownMenu(title: "Menu", items: menuItems)
+        if(!loggedIn){
+            menuView.show()
+        }
+        self.navigationItem.titleView = menuView
+        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
+        menuView.checkMarkImage = nil
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            print("Did select item  \(String(describing: self?.menuItems[indexPath]))")
+            switch self?.menuItems[indexPath] {
+                case "Profile":
+                    self?.ViewProfile()
+                case "Login":
+                    self?.Login()
+                case "Logout":
+                    self?.Logout()
+                default:
+                    print("Enjoy your day!")
+                }
         }
     }
 }
