@@ -12,7 +12,7 @@ import BTNavigationDropdownMenu
 
 class ViewController: UIViewController {
     
-    let testArray = ["tom", "dick", "harry"]
+    var menuItems = ["tom", "dick", "harry"]
     
     let indexCount = 0
     
@@ -27,39 +27,6 @@ class ViewController: UIViewController {
     var loggedIn = false
 
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var registerButton: UIButton!
-    
-    @IBOutlet weak var guestButton: UIButton!
-    
-    @IBAction func didTapRegister(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "register") as! RegisterViewController
-        vc.title = "Register"
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func didTapLogout(_ sender: UIButton) {
-        let firebaseAuth = Auth.auth()
-    do {
-      try firebaseAuth.signOut()
-    } catch let signOutError as NSError {
-      print("Error signing out: %@", signOutError)
-    }
-        
-        
-    }
-    @IBAction func didTapLogin(_ sender: UIButton) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
-        vc.title = "Login"
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func didTapProfile(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "profile") as! ProfileViewController
-        vc.title = "Profile"
-        navigationController?.pushViewController(vc, animated: true)
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,11 +34,11 @@ class ViewController: UIViewController {
         repsManager.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+
+
         
-        // Nav Menu
-        let menuView = BTNavigationDropdownMenu(title: "Menu", items: testArray)
-        self.navigationItem.titleView = menuView
-        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
+        
+
         
         var repURL = "\(repsManager.baseURL)\(repsManager.key)&address=\(addressString)"
 
@@ -80,8 +47,6 @@ class ViewController: UIViewController {
                 
                 self?.loggedIn = true
 
-                self?.registerButton.isHidden = true
-                self?.guestButton.isHidden = true
                 
                 self?.db.collection("addresses").document(user!.uid)
                     .addSnapshotListener { documentSnapshot, error in
@@ -107,7 +72,6 @@ class ViewController: UIViewController {
               
             } else {
                 self?.loggedIn = false
-                print("Not Logged in")
 
                 }
             
@@ -116,6 +80,39 @@ class ViewController: UIViewController {
 
         repsManager.performRequest(with: repURL)
         tableView.reloadData()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        // Nav Menu
+        
+//        menuView.updateItems(self!.menuItems)
+        if(self.loggedIn){
+            self.menuItems = ["Profile", "Logout"]
+        }
+        else{
+            self.menuItems = ["Login", "Register", "Continue as Guest"]
+            
+        }
+        
+        let menuView = BTNavigationDropdownMenu(title: "Menu", items: menuItems)
+        
+        
+        self.navigationItem.titleView = menuView
+        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
+        menuView.checkMarkImage = nil
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            print("Did select item  \(String(describing: self?.menuItems[indexPath]))")
+            switch self?.menuItems[indexPath] {
+                case "Profile":
+                    self?.ViewProfile()
+                case "Login":
+                    self?.Login()
+                case "Logout":
+                    self?.Logout()
+                default:
+                    print("Enjoy your day!")
+                }
+        }
     }
 }
 
@@ -158,6 +155,9 @@ extension ViewController: UITableViewDataSource{
 }
 
 extension ViewController{
+    
+    
+    
     func ViewProfile(){
     let vc = storyboard?.instantiateViewController(withIdentifier: "profile") as! ProfileViewController
     vc.title = "Profile"
@@ -173,6 +173,8 @@ extension ViewController{
             let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
+            self.viewWillAppear(true)
+            
         } catch let signOutError as NSError {
           print("Error signing out: %@", signOutError)
         }
