@@ -18,16 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5ch-L2-3bp">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5ch-L2-3bp">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lns-fb-JXe">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="JFC-Hb-mlo"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="0g4-sP-7H9"/>
+                                            <constraint firstAttribute="height" priority="999" constant="55" id="JFC-Hb-mlo"/>
                                         </constraints>
-                                        <buttonConfiguration key="configuration" style="plain" title="View Voting Resources For" subtitle="Hello" cornerStyle="large" titleAlignment="center">
-                                            <backgroundConfiguration key="background">
+                                        <buttonConfiguration key="configuration" style="plain" title="View Voting Resources For" subtitle="Hello" cornerStyle="fixed" titleAlignment="center">
+                                            <backgroundConfiguration key="background" cornerRadius="0.0">
                                                 <color key="backgroundColor" name="ThemeRed"/>
                                             </backgroundConfiguration>
                                             <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
@@ -37,23 +38,38 @@
                                             <action selector="didTapDetails:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Txb-Em-SE2"/>
                                         </connections>
                                     </button>
-                                    <searchBar contentMode="redraw" id="FF4-9o-Ext">
-                                        <rect key="frame" x="0.0" y="51" width="414" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <textInputTraits key="textInputTraits" textContentType="street-address"/>
-                                    </searchBar>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Representatives" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49b-lJ-uEF">
-                                        <rect key="frame" x="0.0" y="106" width="414" height="31.5"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKR-HS-wdn">
+                                        <rect key="frame" x="0.0" y="65" width="414" height="70"/>
+                                        <subviews>
+                                            <searchBar contentMode="redraw" placeholder="Search Address" id="FF4-9o-Ext">
+                                                <rect key="frame" x="0.0" y="10.71830985918541" width="413.99999999999994" height="51.000000000000028"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <textInputTraits key="textInputTraits" textContentType="street-address"/>
+                                            </searchBar>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="xlf-Gh-WUi"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Representatives" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49b-lJ-uEF">
+                                        <rect key="frame" x="0.0" y="145" width="414" height="50"/>
+                                        <color key="backgroundColor" name="ThemePurple"/>
+                                        <color key="tintColor" name="ThemePurple"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ybZ-I5-OuL"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="zvb-ce-qGL"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="ThemeWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-Jx-ztM">
-                                        <rect key="frame" x="0.0" y="137.5" width="414" height="316"/>
+                                        <rect key="frame" x="0.0" y="205" width="414" height="250"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="500" id="FZ6-wp-5sS"/>
-                                            <constraint firstAttribute="height" constant="300" id="p6w-LF-Neh"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="k7n-vH-vXR"/>
+                                            <constraint firstAttribute="height" constant="250" id="p6w-LF-Neh"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="jYV-47-Ng0" detailTextLabel="Qds-45-j4C" style="IBUITableViewCellStyleSubtitle" id="EJ9-4e-yQq">
@@ -82,19 +98,21 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elections" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zvy-AM-tPj">
-                                        <rect key="frame" x="0.0" y="133.5" width="414" height="20.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elections" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMa-FU-wgj" userLabel="Elections">
+                                        <rect key="frame" x="0.0" y="465" width="414" height="50"/>
+                                        <color key="backgroundColor" name="ThemePurple"/>
+                                        <color key="tintColor" name="ThemePurple"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="7d1-eg-Ev4"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="R1p-cE-Q3O"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" name="ThemeWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="f32-dJ-5mb" userLabel="Election Table View">
-                                        <rect key="frame" x="0.0" y="474" width="414" height="300"/>
+                                        <rect key="frame" x="0.0" y="525" width="414" height="249"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="QrM-O5-a4F"/>
-                                        </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="electionCell" textLabel="XmH-Nk-9Ah" detailTextLabel="E1u-PB-UZq" style="IBUITableViewCellStyleSubtitle" id="aU6-Mt-QJq">
                                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
@@ -123,21 +141,26 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="49b-lJ-uEF" firstAttribute="top" secondItem="tKR-HS-wdn" secondAttribute="bottom" id="LnA-0a-irG"/>
+                                    <constraint firstItem="tKR-HS-wdn" firstAttribute="top" secondItem="lns-fb-JXe" secondAttribute="bottom" id="hBS-dx-TvY"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5ch-L2-3bp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4r6-I6-f6b"/>
-                            <constraint firstItem="5ch-L2-3bp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ten-dK-Ftx"/>
-                            <constraint firstItem="5ch-L2-3bp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WbQ-Np-Fkj"/>
-                            <constraint firstItem="5ch-L2-3bp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pDG-Oh-jWJ"/>
+                            <constraint firstItem="5ch-L2-3bp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="997" id="4r6-I6-f6b"/>
+                            <constraint firstItem="5ch-L2-3bp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="997" id="Ten-dK-Ftx"/>
+                            <constraint firstItem="5ch-L2-3bp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" priority="997" id="WbQ-Np-Fkj"/>
+                            <constraint firstItem="5ch-L2-3bp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" priority="997" id="pDG-Oh-jWJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CLm-cW-sRr"/>
                     <connections>
                         <outlet property="detailsButton" destination="lns-fb-JXe" id="Sm9-id-ZUK"/>
                         <outlet property="electionTableView" destination="f32-dJ-5mb" id="CYM-aP-2Ev"/>
+                        <outlet property="searchBar" destination="FF4-9o-Ext" id="XpM-OH-HCQ"/>
                         <outlet property="tableView" destination="Rae-Jx-ztM" id="YTv-Hx-2Bh"/>
                         <segue destination="ACa-Lx-6Ul" kind="show" identifier="loginToCivic" id="t3B-fc-gRi"/>
                         <segue destination="6WO-qP-eEe" kind="show" identifier="registerSegue" id="t07-Me-mXN"/>
@@ -367,11 +390,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jeq-wd-e4c">
-                                <rect key="frame" x="50" y="50" width="314" height="424"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jeq-wd-e4c">
+                                <rect key="frame" x="0.0" y="50" width="414" height="674"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFp-N2-NK1">
+                                        <rect key="frame" x="145" y="0.0" width="124.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="useraddress" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRQ-TK-JAv" userLabel="User Address">
+                                        <rect key="frame" x="160" y="107.5" width="94.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="ucC-6K-c3c">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="260"/>
+                                        <rect key="frame" x="50" y="215" width="314" height="260"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Bqa-Ef-nJw">
                                                 <rect key="frame" x="0.0" y="0.0" width="314" height="54.5"/>
@@ -440,10 +475,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="VDw-Yk-DXx">
-                                        <rect key="frame" x="0.0" y="312" width="314" height="112"/>
+                                        <rect key="frame" x="141" y="562" width="132.5" height="112"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sk2-Bg-Me8">
-                                                <rect key="frame" x="0.0" y="0.0" width="314" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="132.5" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Update"/>
                                                 <connections>
@@ -451,7 +486,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jjt-CO-nvk">
-                                                <rect key="frame" x="0.0" y="81" width="314" height="31"/>
+                                                <rect key="frame" x="0.0" y="81" width="132.5" height="31"/>
                                                 <color key="tintColor" name="ThemeRed"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Remove Address"/>
@@ -459,14 +494,18 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="ucC-6K-c3c" firstAttribute="leading" secondItem="jeq-wd-e4c" secondAttribute="leading" constant="50" id="nIq-MF-0CY"/>
+                                    <constraint firstAttribute="trailing" secondItem="ucC-6K-c3c" secondAttribute="trailing" constant="50" id="wY9-NQ-GOA"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RVZ-qG-u9t"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RVZ-qG-u9t" firstAttribute="trailing" secondItem="jeq-wd-e4c" secondAttribute="trailing" constant="50" id="3QJ-fY-yLY"/>
-                            <constraint firstItem="RVZ-qG-u9t" firstAttribute="bottom" secondItem="jeq-wd-e4c" secondAttribute="bottom" constant="300" id="PQJ-Sm-wDT"/>
-                            <constraint firstItem="jeq-wd-e4c" firstAttribute="leading" secondItem="RVZ-qG-u9t" secondAttribute="leading" constant="50" id="Ygh-Ko-mM8"/>
+                            <constraint firstItem="RVZ-qG-u9t" firstAttribute="trailing" secondItem="jeq-wd-e4c" secondAttribute="trailing" id="3QJ-fY-yLY"/>
+                            <constraint firstItem="RVZ-qG-u9t" firstAttribute="bottom" secondItem="jeq-wd-e4c" secondAttribute="bottom" constant="50" id="PQJ-Sm-wDT"/>
+                            <constraint firstItem="jeq-wd-e4c" firstAttribute="leading" secondItem="RVZ-qG-u9t" secondAttribute="leading" id="Ygh-Ko-mM8"/>
                             <constraint firstItem="jeq-wd-e4c" firstAttribute="top" secondItem="RVZ-qG-u9t" secondAttribute="top" constant="50" id="aKT-Z4-DGd"/>
                         </constraints>
                     </view>
@@ -475,6 +514,7 @@
                         <outlet property="addressTextField" destination="slL-6b-eQU" id="k4S-Wv-UDh"/>
                         <outlet property="cityTextField" destination="YDH-Fu-GzM" id="nEK-6I-6s4"/>
                         <outlet property="stateTextField" destination="fsv-Hb-4Fb" id="hye-WL-2Qw"/>
+                        <outlet property="userAddressLabel" destination="sRQ-TK-JAv" id="0lt-f8-N3O"/>
                         <outlet property="zipTextField" destination="n4e-QJ-9cP" id="TDO-yU-BR9"/>
                     </connections>
                 </viewController>
@@ -507,6 +547,9 @@
     <resources>
         <namedColor name="ThemeBlue">
             <color red="0.23499999940395355" green="0.23100000619888306" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThemePurple">
+            <color red="0.46700000762939453" green="0.18400000035762787" blue="0.31799998879432678" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ThemeRed">
             <color red="0.69800001382827759" green="0.13300000131130219" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

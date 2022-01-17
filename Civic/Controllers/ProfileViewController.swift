@@ -11,6 +11,8 @@ import FirebaseFirestore
 
 class ProfileViewController: UIViewController {
     let db = Firestore.firestore()
+    
+    var addressString = ""
 
     @IBOutlet weak var addressTextField: UITextField!
     
@@ -21,9 +23,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var zipTextField: UITextField!
     
     
+    @IBOutlet weak var userAddressLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userAddressLabel.text = addressString.replacingOccurrences(of: "%20", with: " ")
         // Do any additional setup after loading the view.
     }
     

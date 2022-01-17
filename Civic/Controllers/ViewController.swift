@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         
     @IBOutlet weak var detailsButton: UIButton!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,6 +47,7 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         electionTableView.delegate = self
         electionTableView.dataSource = self
+        searchBar.delegate = self
 
         var repURL = "\(repsManager.baseURL)\(repsManager.key)&address=\(addressString)"
 
@@ -110,7 +113,7 @@ extension ViewController: RepsManagerDelegate{
 }
 
 extension ViewController: ElectionManagerDelegate{
-    func didUpdateElections(_ electionManager: ElectionManager, elections: [[String : String]]) {
+    func didUpdateElections(_ electionManager:   ElectionManager, elections: [[String : String]]) {
         self.electionsManager.elections = elections
         print(elections)
         DispatchQueue.main.async {
@@ -169,11 +172,10 @@ extension ViewController: UITableViewDataSource{
 
 extension ViewController{
     
-    
-    
     func ViewProfile(){
     let vc = storyboard?.instantiateViewController(withIdentifier: "profile") as! ProfileViewController
     vc.title = "Profile"
+        vc.addressString = addressString
         navigationController?.pushViewController(vc, animated: true)}
     
     func Login(){
@@ -235,5 +237,14 @@ extension ViewController{
             }
         }
     }
+}
+
+extension ViewController: UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchURL = "\(repsManager.baseURL)\(repsManager.key)&address=\(searchBar.text?.replacingOccurrences(of: " ", with: "%20") ?? addressString)"
+        
+        repsManager.performRequest(with: searchURL)
+    }
+    
 }
 
