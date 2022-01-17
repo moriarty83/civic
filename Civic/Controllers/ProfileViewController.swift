@@ -37,9 +37,6 @@ class ProfileViewController: UIViewController {
             let city = cityTextField.text,
             let state = stateTextField.text,
             let zip = zipTextField.text{
-            
-            
-
 
             print("making db req")
             let dataArray = [

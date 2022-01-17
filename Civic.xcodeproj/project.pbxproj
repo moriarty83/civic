@@ -10,6 +10,8 @@
 		832FAEEA27908B12003E39EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FAEE927908B11003E39EB /* ProfileViewController.swift */; };
 		83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1C278FC0AB00F4D385 /* LoginViewController.swift */; };
 		83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1E278FC17500F4D385 /* RegisterViewController.swift */; };
+		83579DE427951B71008666C2 /* VoterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83579DE327951B71008666C2 /* VoterInfoViewController.swift */; };
+		83579DE62795ACDF008666C2 /* VoterInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83579DE52795ACDF008666C2 /* VoterInfoManager.swift */; };
 		83A2FD32279246D2002E3F0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */; };
 		83A2FD3427931ACC002E3F0B /* RepsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2FD3327931ACC002E3F0B /* RepsData.swift */; };
 		83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC73278F72CF002CE83E /* AppDelegate.swift */; };
@@ -24,9 +26,6 @@
 		83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCA8278FA559002CE83E /* ElectionManager.swift */; };
 		83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCAA278FA574002CE83E /* RepsManager.swift */; };
 		83B7FCAD278FA63B002CE83E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FCAC278FA63B002CE83E /* Constants.swift */; };
-		83B8D17F2791CE3800EE99E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */; };
-		83B8D1802791CE3800EE99E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */; };
-		83B8D1812791CE3800EE99E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */; };
 		83B8D1832791D2AB00EE99E0 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D1822791D2AB00EE99E0 /* AddressData.swift */; };
 		83B8D1842791D2AB00EE99E0 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D1822791D2AB00EE99E0 /* AddressData.swift */; };
 		83B8D1852791D2AB00EE99E0 /* AddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B8D1822791D2AB00EE99E0 /* AddressData.swift */; };
@@ -58,6 +57,8 @@
 		832FAEE927908B11003E39EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		83339B1C278FC0AB00F4D385 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83339B1E278FC17500F4D385 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		83579DE327951B71008666C2 /* VoterInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoterInfoViewController.swift; sourceTree = "<group>"; };
+		83579DE52795ACDF008666C2 /* VoterInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoterInfoManager.swift; sourceTree = "<group>"; };
 		83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83A2FD3327931ACC002E3F0B /* RepsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsData.swift; sourceTree = "<group>"; };
 		83B7FC70278F72CF002CE83E /* Civic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Civic.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +78,6 @@
 		83B7FCA8278FA559002CE83E /* ElectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionManager.swift; sourceTree = "<group>"; };
 		83B7FCAA278FA574002CE83E /* RepsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsManager.swift; sourceTree = "<group>"; };
 		83B7FCAC278FA63B002CE83E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		83B8D1822791D2AB00EE99E0 /* AddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressData.swift; sourceTree = "<group>"; };
 		83B8D1862791E0EE00EE99E0 /* test.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		AA39D2885B6095CB2D4D1C1B /* Pods_Civic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Civic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +183,7 @@
 				83B7FCAA278FA574002CE83E /* RepsManager.swift */,
 				83A2FD3327931ACC002E3F0B /* RepsData.swift */,
 				83B8D1822791D2AB00EE99E0 /* AddressData.swift */,
+				83579DE52795ACDF008666C2 /* VoterInfoManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,7 +204,7 @@
 				83339B1C278FC0AB00F4D385 /* LoginViewController.swift */,
 				83339B1E278FC17500F4D385 /* RegisterViewController.swift */,
 				832FAEE927908B11003E39EB /* ProfileViewController.swift */,
-				83B8D17E2791CE3800EE99E0 /* HomeViewController.swift */,
+				83579DE327951B71008666C2 /* VoterInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -398,15 +399,16 @@
 				83B8D1832791D2AB00EE99E0 /* AddressData.swift in Sources */,
 				83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */,
 				83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */,
+				83579DE62795ACDF008666C2 /* VoterInfoManager.swift in Sources */,
 				83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */,
 				83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */,
 				83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */,
 				83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */,
-				83B8D17F2791CE3800EE99E0 /* HomeViewController.swift in Sources */,
 				832FAEEA27908B12003E39EB /* ProfileViewController.swift in Sources */,
 				83A2FD3427931ACC002E3F0B /* RepsData.swift in Sources */,
 				83B7FC76278F72CF002CE83E /* SceneDelegate.swift in Sources */,
 				83B7FCAD278FA63B002CE83E /* Constants.swift in Sources */,
+				83579DE427951B71008666C2 /* VoterInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +418,6 @@
 			files = (
 				83B8D1842791D2AB00EE99E0 /* AddressData.swift in Sources */,
 				83B7FC8B278F72D1002CE83E /* CivicTests.swift in Sources */,
-				83B8D1802791CE3800EE99E0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +428,6 @@
 				83B8D1852791D2AB00EE99E0 /* AddressData.swift in Sources */,
 				83B7FC95278F72D1002CE83E /* CivicUITests.swift in Sources */,
 				83B7FC97278F72D1002CE83E /* CivicUITestsLaunchTests.swift in Sources */,
-				83B8D1812791CE3800EE99E0 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

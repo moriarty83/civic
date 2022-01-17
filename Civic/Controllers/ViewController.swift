@@ -27,10 +27,14 @@ class ViewController: UIViewController {
     weak var handle: AuthStateDidChangeListenerHandle?
     
     var loggedIn = false
+    
+    var runViewWillAppear = false;
 
     @IBOutlet weak var tableView: UITableView!
 
     @IBOutlet weak var electionTableView: UITableView!
+        
+    @IBOutlet weak var detailsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,37 +61,42 @@ class ViewController: UIViewController {
                         print("Document data was empty.")
                         return
                       }
-                        var string = ""
-                        for (key, value) in data{
-                            string = "\(string) \(value)"
-                        }
+                        
+                        var string = "\(data["address"] ?? "") \(data["city"] ?? "") \(data["state"] ?? "") \(data["zip"] ?? "")"
                         self?.addressString = string.replacingOccurrences(of: " ", with: "%20")
                         repURL = "\(self!.repsManager.baseURL)\(self!.repsManager.key)&address=\(self!.addressString)"
                         print(repURL)
                         self!.repsManager.performRequest(with: repURL)
-                        
+                        self!.detailsButton.configuration?.subtitle = "\(self?.addressString.replacingOccurrences(of: "%20", with: " ") ?? "")"
+                        self!.loadMenu()
+                        self!.runViewWillAppear = true
                     }
               
             } else {
                 self?.loggedIn = false
+                self!.loadMenu()
+                self!.runViewWillAppear = true
                 }
         }
-
+        
         repsManager.performRequest(with: repURL)
         electionsManager.performRequest()
         tableView.reloadData()
+        electionTableView.reloadData()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         // Nav Menu
-                if(self.loggedIn){
-            self.menuItems = ["Profile", "Logout"]
+        if(runViewWillAppear){
+            loadMenu()
         }
-        else{
-            self.menuItems = ["Login", "Register", "Continue as Guest"]
-            
-        }
-        loadMenu()
+        
+    }
+    @IBAction func didTapDetails(_ sender: UIButton) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "voterDetail") as! VoterInfoViewController
+        vc.title = "Voting Info"
+        vc.addressString = addressString
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -187,7 +196,22 @@ extension ViewController{
         loadMenu()
     }
     
+    func Register(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "register") as! RegisterViewController
+        vc.title = "Register"
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func loadMenu(){
+        
+        if(self.loggedIn){
+            self.menuItems = ["Profile", "Logout"]
+        }
+        else{
+            self.menuItems = ["Login", "Register", "Continue as Guest"]
+            
+        }
+        
         let menuView = BTNavigationDropdownMenu(title: "Menu", items: menuItems)
         if(!loggedIn){
             menuView.show()
@@ -204,6 +228,8 @@ extension ViewController{
                     self?.Login()
                 case "Logout":
                     self?.Logout()
+                case "Register":
+                    self?.Register()
                 default:
                     print("Enjoy your day!")
             }
