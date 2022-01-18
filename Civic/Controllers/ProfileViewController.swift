@@ -52,21 +52,15 @@ class ProfileViewController: UIViewController {
             
             db.collection("addresses").document(user).setData(dataArray)
             print (dataArray)
-
-//            db.collection("addresses").addDocument(data: dataArray) { error in
-//                if let e = error{
-//                    print("there was an issue saving data, \(e as NSError)")
-//                }
-//                else{
-//                    print("successfully saved data")
-//                    DispatchQueue.main.async {
-//                        self.addressTextField.text = ""
-//                        self.cityTextField.text = ""
-//                        self.stateTextField.text = ""
-//                        self.zipTextField.text = ""
-//                    }
-//                }
-//            }
+            self.navigationController?.popViewController(animated: true)
+            
+        }
+    }
+    @IBAction func didTapRemoveAddress(_ sender: UIButton) {
+        if let user = Auth.auth().currentUser?.uid{
+            db.collection("addresses").document(user).delete()
+            userAddressLabel.text = "No Address Saved"
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }

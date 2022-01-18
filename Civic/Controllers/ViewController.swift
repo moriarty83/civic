@@ -62,6 +62,8 @@ class ViewController: UIViewController {
                       }
                       guard let data = document.data() else {
                         print("Document data was empty.")
+                          self!.loadMenu()
+                          self!.runViewWillAppear = true
                         return
                       }
                         
@@ -100,6 +102,9 @@ class ViewController: UIViewController {
         vc.title = "Voting Info"
         vc.addressString = addressString
         navigationController?.pushViewController(vc, animated: true)
+    }
+    @IBAction func didTapRefresh(_ sender: Any) {
+        reloadViewFromNib()
     }
 }
 
@@ -184,11 +189,21 @@ extension ViewController{
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    func ContinueAsGuest(){
+        addressString = ""
+        repsManager.reps = []
+        tableView.reloadData()
+    }
+    
     func Logout(){
         print("logging out")
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
+            self.repsManager.reps = []
+            self.tableView.reloadData()
+            self.addressString = ""
+            self.detailsButton.configuration?.subtitle = "No Address Found"
             self.viewWillAppear(true)
             self.menuItems = ["Login", "Register", "Continue as Guest"]
             
@@ -243,8 +258,19 @@ extension ViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let searchURL = "\(repsManager.baseURL)\(repsManager.key)&address=\(searchBar.text?.replacingOccurrences(of: " ", with: "%20") ?? addressString)"
         
+        detailsButton.configuration?.subtitle = searchBar.text
         repsManager.performRequest(with: searchURL)
     }
     
+}
+
+extension ViewController{
+    func reloadViewFromNib() {
+        addressString = ""
+        let parent = view.superview
+        view.removeFromSuperview()
+        view = nil
+        parent?.addSubview(view) // This line causes the view to be reloaded
+    }
 }
 

@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -27,7 +28,7 @@
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="55" id="0g4-sP-7H9"/>
                                             <constraint firstAttribute="height" priority="999" constant="55" id="JFC-Hb-mlo"/>
                                         </constraints>
-                                        <buttonConfiguration key="configuration" style="plain" title="View Voting Resources For" subtitle="Hello" cornerStyle="fixed" titleAlignment="center">
+                                        <buttonConfiguration key="configuration" style="plain" title="View Voting Resources" cornerStyle="fixed" titleAlignment="center">
                                             <backgroundConfiguration key="background" cornerRadius="0.0">
                                                 <color key="backgroundColor" name="ThemeRed"/>
                                             </backgroundConfiguration>
@@ -156,7 +157,22 @@
                             <constraint firstItem="5ch-L2-3bp" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" priority="997" id="pDG-Oh-jWJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CLm-cW-sRr"/>
+                    <navigationItem key="navigationItem" id="CLm-cW-sRr">
+                        <barButtonItem key="rightBarButtonItem" id="1mU-CL-wqA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="NNK-v7-7Xk">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" imagePlacement="trailing" title=" ">
+                                    <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="medium"/>
+                                    <color key="baseForegroundColor" name="ThemeWhite"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oac-QQ-wxg"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="detailsButton" destination="lns-fb-JXe" id="Sm9-id-ZUK"/>
                         <outlet property="electionTableView" destination="f32-dJ-5mb" id="CYM-aP-2Ev"/>
@@ -356,7 +372,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBK-73-HDC">
                                         <rect key="frame" x="0.0" y="193" width="314" height="31"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Login">
+                                            <color key="baseBackgroundColor" name="ThemeRed"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="loginPressed:" destination="ACa-Lx-6Ul" eventType="touchUpInside" id="z0J-QV-wm0"/>
                                         </connections>
@@ -490,6 +508,9 @@
                                                 <color key="tintColor" name="ThemeRed"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Remove Address"/>
+                                                <connections>
+                                                    <action selector="didTapRemoveAddress:" destination="axG-Tg-eJx" eventType="touchUpInside" id="jYn-LJ-Z6s"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -530,6 +551,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="FbT-EJ-y0S">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="ThemeWhite"/>
+                        </textAttributes>
                         <navigationBarAppearance key="scrollEdgeAppearance">
                             <color key="backgroundColor" name="ThemeBlue"/>
                         </navigationBarAppearance>
@@ -545,6 +569,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <namedColor name="ThemeBlue">
             <color red="0.23499999940395355" green="0.23100000619888306" blue="0.4309999942779541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
