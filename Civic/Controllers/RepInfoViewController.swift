@@ -67,7 +67,6 @@ class RepInfoViewController: UIViewController {
         print("loading image")
         print(url)
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-
             DispatchQueue.main.async { //all changes to UI must be called on main thread
                 if let error = error {
                     print("Error: \(error)")
@@ -88,7 +87,6 @@ class RepInfoViewController: UIViewController {
                 }
             }
         }.resume()
-        
     }
     
     func populateButtons(){

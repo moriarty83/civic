@@ -17,6 +17,8 @@
 		83A2FD32279246D2002E3F0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */; };
 		83A2FD3427931ACC002E3F0B /* RepsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2FD3327931ACC002E3F0B /* RepsData.swift */; };
 		83ACCE722798DA11002F6EE5 /* RepInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCE712798DA11002F6EE5 /* RepInfoViewController.swift */; };
+		83ACCE742799056C002F6EE5 /* ElectionDetailManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCE732799056C002F6EE5 /* ElectionDetailManager.swift */; };
+		83ACCE7627990785002F6EE5 /* ElectionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCE7527990785002F6EE5 /* ElectionDetailViewController.swift */; };
 		83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC73278F72CF002CE83E /* AppDelegate.swift */; };
 		83B7FC76278F72CF002CE83E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC75278F72CF002CE83E /* SceneDelegate.swift */; };
 		83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC77278F72CF002CE83E /* ViewController.swift */; };
@@ -67,6 +69,8 @@
 		83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83A2FD3327931ACC002E3F0B /* RepsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsData.swift; sourceTree = "<group>"; };
 		83ACCE712798DA11002F6EE5 /* RepInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepInfoViewController.swift; sourceTree = "<group>"; };
+		83ACCE732799056C002F6EE5 /* ElectionDetailManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionDetailManager.swift; sourceTree = "<group>"; };
+		83ACCE7527990785002F6EE5 /* ElectionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectionDetailViewController.swift; sourceTree = "<group>"; };
 		83B7FC70278F72CF002CE83E /* Civic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Civic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B7FC73278F72CF002CE83E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B7FC75278F72CF002CE83E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 				83A2FD3327931ACC002E3F0B /* RepsData.swift */,
 				83B8D1822791D2AB00EE99E0 /* AddressData.swift */,
 				83579DE52795ACDF008666C2 /* VoterInfoManager.swift */,
+				83ACCE732799056C002F6EE5 /* ElectionDetailManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				83ACCE712798DA11002F6EE5 /* RepInfoViewController.swift */,
 				832FAEE927908B11003E39EB /* ProfileViewController.swift */,
 				83579DE327951B71008666C2 /* VoterInfoViewController.swift */,
+				83ACCE7527990785002F6EE5 /* ElectionDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -406,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83ACCE7627990785002F6EE5 /* ElectionDetailViewController.swift in Sources */,
 				83B8D1832791D2AB00EE99E0 /* AddressData.swift in Sources */,
 				83ACCE722798DA11002F6EE5 /* RepInfoViewController.swift in Sources */,
 				83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */,
@@ -413,6 +420,7 @@
 				831C437D2797564800C91E58 /* RepCell.swift in Sources */,
 				83579DE62795ACDF008666C2 /* VoterInfoManager.swift in Sources */,
 				83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */,
+				83ACCE742799056C002F6EE5 /* ElectionDetailManager.swift in Sources */,
 				83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */,
 				83B7FCAB278FA574002CE83E /* RepsManager.swift in Sources */,
 				83B7FCA9278FA559002CE83E /* ElectionManager.swift in Sources */,

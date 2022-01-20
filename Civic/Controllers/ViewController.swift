@@ -154,9 +154,16 @@ extension ViewController: UITableViewDelegate{
             navigationController?.pushViewController(vc, animated: true)
         }
         
-//        if tableView == self.electionTableView {
-//            print("hello")
-//        }
+        if tableView == self.electionTableView {
+            let election = self.electionsManager.elections?[indexPath.row] ?? [:]
+            let vc = storyboard?.instantiateViewController(withIdentifier: "electionDetail") as! ElectionDetailViewController
+            vc.title = "Election"
+            vc.electionTitle = election["name"] ?? ""
+            vc.electionID = election["id"] ?? ""
+            vc.addressString = addressString
+//            vc.official = rep
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
@@ -281,6 +288,8 @@ extension ViewController{
             menuView.show()
         }
         self.navigationItem.titleView = menuView
+        menuView.menuTitleColor = UIColor(named: "ThemeWhite")
+        menuView.cellTextLabelColor = UIColor(named: "ThemeWhite")
         menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
         menuView.checkMarkImage = nil
         menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in

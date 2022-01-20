@@ -62,14 +62,4 @@ struct VoterInfoManager {
         
     }
     
-    
 }
-
-
-
-    
-        
-
-    
-    
-
