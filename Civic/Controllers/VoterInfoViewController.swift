@@ -72,7 +72,6 @@ extension VoterInfoViewController: UITableViewDelegate{
                 guard let urlString = self.voterInfoManager.voterInfo[indexPath.row]["value"] else { return  }
                 if let url = URL(string: urlString)
                 {
-                    print(url)
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
                 

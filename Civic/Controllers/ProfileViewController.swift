@@ -52,7 +52,7 @@ class ProfileViewController: UIViewController {
             
             db.collection("addresses").document(user).setData(dataArray)
             print (dataArray)
-            self.navigationController?.popViewController(animated: true)
+            self.navigationController?.popToRootViewController(animated: true)
             
         }
     }
@@ -60,6 +60,7 @@ class ProfileViewController: UIViewController {
         if let user = Auth.auth().currentUser?.uid{
             db.collection("addresses").document(user).delete()
             userAddressLabel.text = "No Address Saved"
+            NotificationCenter.default.post(name: Notification.Name("addressDeleted"), object: nil)
             self.navigationController?.popViewController(animated: true)
         }
     }

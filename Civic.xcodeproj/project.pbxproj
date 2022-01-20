@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		831C437B2797562C00C91E58 /* RepCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831C437A2797562C00C91E58 /* RepCell.xib */; };
+		831C437D2797564800C91E58 /* RepCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831C437C2797564800C91E58 /* RepCell.swift */; };
 		832FAEEA27908B12003E39EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832FAEE927908B11003E39EB /* ProfileViewController.swift */; };
 		83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1C278FC0AB00F4D385 /* LoginViewController.swift */; };
 		83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83339B1E278FC17500F4D385 /* RegisterViewController.swift */; };
@@ -14,6 +16,7 @@
 		83579DE62795ACDF008666C2 /* VoterInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83579DE52795ACDF008666C2 /* VoterInfoManager.swift */; };
 		83A2FD32279246D2002E3F0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */; };
 		83A2FD3427931ACC002E3F0B /* RepsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A2FD3327931ACC002E3F0B /* RepsData.swift */; };
+		83ACCE722798DA11002F6EE5 /* RepInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ACCE712798DA11002F6EE5 /* RepInfoViewController.swift */; };
 		83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC73278F72CF002CE83E /* AppDelegate.swift */; };
 		83B7FC76278F72CF002CE83E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC75278F72CF002CE83E /* SceneDelegate.swift */; };
 		83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B7FC77278F72CF002CE83E /* ViewController.swift */; };
@@ -54,6 +57,8 @@
 
 /* Begin PBXFileReference section */
 		063E95E8DEF524856DC19368 /* Pods-Civic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Civic.release.xcconfig"; path = "Target Support Files/Pods-Civic/Pods-Civic.release.xcconfig"; sourceTree = "<group>"; };
+		831C437A2797562C00C91E58 /* RepCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepCell.xib; sourceTree = "<group>"; };
+		831C437C2797564800C91E58 /* RepCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepCell.swift; sourceTree = "<group>"; };
 		832FAEE927908B11003E39EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		83339B1C278FC0AB00F4D385 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		83339B1E278FC17500F4D385 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 		83579DE52795ACDF008666C2 /* VoterInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoterInfoManager.swift; sourceTree = "<group>"; };
 		83A2FD31279246D2002E3F0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83A2FD3327931ACC002E3F0B /* RepsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsData.swift; sourceTree = "<group>"; };
+		83ACCE712798DA11002F6EE5 /* RepInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepInfoViewController.swift; sourceTree = "<group>"; };
 		83B7FC70278F72CF002CE83E /* Civic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Civic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B7FC73278F72CF002CE83E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83B7FC75278F72CF002CE83E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +199,8 @@
 			children = (
 				83B7FC79278F72CF002CE83E /* Main.storyboard */,
 				83B7FC7E278F72D0002CE83E /* LaunchScreen.storyboard */,
+				831C437A2797562C00C91E58 /* RepCell.xib */,
+				831C437C2797564800C91E58 /* RepCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +211,7 @@
 				83B7FC77278F72CF002CE83E /* ViewController.swift */,
 				83339B1C278FC0AB00F4D385 /* LoginViewController.swift */,
 				83339B1E278FC17500F4D385 /* RegisterViewController.swift */,
+				83ACCE712798DA11002F6EE5 /* RepInfoViewController.swift */,
 				832FAEE927908B11003E39EB /* ProfileViewController.swift */,
 				83579DE327951B71008666C2 /* VoterInfoViewController.swift */,
 			);
@@ -326,6 +335,7 @@
 				83B7FC80278F72D0002CE83E /* LaunchScreen.storyboard in Resources */,
 				83B8D1872791E0EE00EE99E0 /* test.json in Resources */,
 				83B7FC7D278F72D0002CE83E /* Assets.xcassets in Resources */,
+				831C437B2797562C00C91E58 /* RepCell.xib in Resources */,
 				83A2FD32279246D2002E3F0B /* GoogleService-Info.plist in Resources */,
 				83B7FC7B278F72CF002CE83E /* Main.storyboard in Resources */,
 			);
@@ -397,8 +407,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B8D1832791D2AB00EE99E0 /* AddressData.swift in Sources */,
+				83ACCE722798DA11002F6EE5 /* RepInfoViewController.swift in Sources */,
 				83339B1D278FC0AB00F4D385 /* LoginViewController.swift in Sources */,
 				83B7FC78278F72CF002CE83E /* ViewController.swift in Sources */,
+				831C437D2797564800C91E58 /* RepCell.swift in Sources */,
 				83579DE62795ACDF008666C2 /* VoterInfoManager.swift in Sources */,
 				83B7FC74278F72CF002CE83E /* AppDelegate.swift in Sources */,
 				83339B1F278FC17500F4D385 /* RegisterViewController.swift in Sources */,

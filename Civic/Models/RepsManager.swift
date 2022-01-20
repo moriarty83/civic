@@ -56,9 +56,20 @@ struct RepsManager {
                 
                 for (key, value) in office["officialIndices"]{
                     let index: Int = Int(value.rawString()!)!
-//                    print(officalNames[index])
-//                    print(office["name"])
-                    officials.append(["name": officalNames[index], "office": office["name"].stringValue,  "party": officalParty[index]])
+                    print(json["officials"][index]["urls"][0].stringValue)
+                    officials.append(["name": officalNames[index],
+                                      "office": office["name"].stringValue,
+                                      "party": officalParty[index],
+                                      "photoUrl":json["officials"][index]["photoUrl"].stringValue,
+                                      "Website": json["officials"][index]["urls"][0].stringValue,
+                                      "social1Type": json["officials"][index]["channels"][0]["type"].stringValue,
+                                      "social1Handle": json["officials"][index]["channels"][0]["id"].stringValue,
+                                      "social1Link": "https://www.\(json["officials"][index]["channels"][0]["type"].stringValue).com/\(json["officials"][index]["channels"][0]["id"].stringValue)",
+                                      "social2Type": json["officials"][index]["channels"][1]["type"].stringValue,
+                                      "social2Handle": json["officials"][index]["channels"][1]["id"].stringValue,
+                                      "social2Link": "https://www.\(json["officials"][index]["channels"][1]["type"].stringValue).com/\(json["officials"][index]["channels"][1]["id"].stringValue)"
+                                      
+                                     ])
 
                 }
             }
@@ -67,6 +78,7 @@ struct RepsManager {
             print(error)
 
         }
+//        print (officials)
         return officials
         
     }

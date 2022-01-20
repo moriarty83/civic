@@ -48,6 +48,10 @@ class ViewController: UIViewController {
         electionTableView.delegate = self
         electionTableView.dataSource = self
         searchBar.delegate = self
+        
+        tableView.register(UINib(nibName: "RepCell", bundle: nil), forCellReuseIdentifier: "repCell")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(addressDeleted), name: Notification.Name("addressDeleted"), object: nil)
 
         var repURL = "\(repsManager.baseURL)\(repsManager.key)&address=\(addressString)"
 
@@ -106,6 +110,13 @@ class ViewController: UIViewController {
     @IBAction func didTapRefresh(_ sender: Any) {
         reloadViewFromNib()
     }
+    
+    @objc func addressDeleted(){
+        addressString = ""
+        self.detailsButton.configuration?.subtitle = "No Address Found"
+        let repURL = "\(self.repsManager.baseURL)\(self.repsManager.key)&address=\(self.addressString)"
+        self.repsManager.performRequest(with: repURL)
+    }
 }
 
 extension ViewController: RepsManagerDelegate{
@@ -127,14 +138,38 @@ extension ViewController: ElectionManagerDelegate{
     }
 }
 
+
+////////////////////////////
+///// MARK: - TABLE VIEW DELEGATE
+////////////////////////////
 extension ViewController: UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if tableView == self.tableView {
+            let rep = self.repsManager.reps?[indexPath.row] ?? [:]
+            let vc = storyboard?.instantiateViewController(withIdentifier: "repDetail") as! RepInfoViewController
+            vc.title = "Representative"
+            vc.official = rep
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
+//        if tableView == self.electionTableView {
+//            print("hello")
+//        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 60 //or whatever you need
     }
     
 }
 
+
+////////////////////////////
+///// MARK: - TABLE VIEW DATA SOURCE
+////////////////////////////
 extension ViewController: UITableViewDataSource{
     
 //    func numberOfSections(in tableView: UITableView) -> Int {
@@ -154,11 +189,20 @@ extension ViewController: UITableViewDataSource{
         }
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == self.tableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.textLabel?.text = self.repsManager.reps?[indexPath.row]["name"]
-            cell.detailTextLabel?.text = self.repsManager.reps?[indexPath.row]["office"]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "repCell", for: indexPath) as! RepCell
+            cell.nameLabel?.text = self.repsManager.reps?[indexPath.row]["name"]
+            cell.titleLabel?.text = self.repsManager.reps?[indexPath.row]["office"]
+            
+            if(self.repsManager.reps?[indexPath.row]["party"]?.prefix(1) == "D"){
+                cell.partyImage.tintColor = UIColor(named: "ThemeDems")
+            }
+            if(self.repsManager.reps?[indexPath.row]["party"]?.prefix(1) == "R"){
+                cell.partyImage.tintColor = UIColor(named: "ThemeGop")
+            }
             
             return cell
         }
@@ -175,6 +219,9 @@ extension ViewController: UITableViewDataSource{
     }
 }
 
+////////////////////////////
+///// MARK: - MENU
+////////////////////////////
 extension ViewController{
     
     func ViewProfile(){
@@ -256,6 +303,7 @@ extension ViewController{
 
 extension ViewController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        addressString = (searchBar.text?.replacingOccurrences(of: " ", with: "%20") ?? addressString)
         let searchURL = "\(repsManager.baseURL)\(repsManager.key)&address=\(searchBar.text?.replacingOccurrences(of: " ", with: "%20") ?? addressString)"
         
         detailsButton.configuration?.subtitle = searchBar.text

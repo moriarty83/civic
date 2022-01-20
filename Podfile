@@ -12,4 +12,6 @@ target 'Civic' do
   pod 'FirebaseFirestoreSwift'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'BTNavigationDropdownMenu'
+  pod 'IQKeyboardManager'
+  
 end
