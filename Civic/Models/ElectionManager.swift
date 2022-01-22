@@ -52,7 +52,7 @@ struct ElectionManager {
             print(error)
 
         }
-        
+        elections.remove(at: 0)
         return elections
         
     }

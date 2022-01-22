@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     var addressString: String = ""
     
+    var userAddressString: String = ""
+    
     var repsManager = RepsManager()
     
     var electionsManager = ElectionManager()
@@ -74,6 +76,7 @@ class ViewController: UIViewController {
                         
                         let string = "\(data["address"] ?? "") \(data["city"] ?? "") \(data["state"] ?? "") \(data["zip"] ?? "")"
                         self?.addressString = string.replacingOccurrences(of: " ", with: "%20")
+                        self?.userAddressString = string.replacingOccurrences(of: " ", with: "%20")
                         repURL = "\(self!.repsManager.baseURL)\(self!.repsManager.key)&address=\(self!.addressString)"
                         print(repURL)
                         self!.repsManager.performRequest(with: repURL)
@@ -235,8 +238,8 @@ extension ViewController{
     
     func ViewProfile(){
     let vc = storyboard?.instantiateViewController(withIdentifier: "profile") as! ProfileViewController
-    vc.title = "Profile"
-        vc.addressString = addressString
+        vc.title = "Profile"
+        vc.addressString = userAddressString
         navigationController?.pushViewController(vc, animated: true)}
     
     func Login(){
