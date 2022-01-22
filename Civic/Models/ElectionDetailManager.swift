@@ -14,7 +14,6 @@ protocol ElectionDetailManagerDelegate{
 
 
 struct ElectionDetailManager{
-    
     var contests: Array<Dictionary<String, String>> = []
     
     var electionDate: String = ""

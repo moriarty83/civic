@@ -15,7 +15,7 @@ struct Address: Decodable{
     
     func addressString() -> String{
         let array = [address, city, state, zip]
-        var string = array.joined(separator: " ")
+        let string = array.joined(separator: " ")
         return string.replacingOccurrences(of: " ", with: "%20")
     }
 }

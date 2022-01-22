@@ -52,9 +52,9 @@ struct RepsManager {
             let officalParty =  json["officials"].arrayValue.map {$0["party"].stringValue}
 
             
-            for (key,office):(String, JSON) in json["offices"] {
+            for (_,office):(String, JSON) in json["offices"] {
                 
-                for (key, value) in office["officialIndices"]{
+                for (_, value) in office["officialIndices"]{
                     let index: Int = Int(value.rawString()!)!
                     print(json["officials"][index]["urls"][0].stringValue)
                     officials.append(["name": officalNames[index],

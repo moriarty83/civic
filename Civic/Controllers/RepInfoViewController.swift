@@ -9,7 +9,7 @@ import UIKit
 
 class RepInfoViewController: UIViewController {
     
-    var imageUrlString = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg"
+    var imageUrlString = ""
     let unknownImageUrl = URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/434px-Unknown_person.jpg")
     @IBOutlet weak var namelabel: UILabel!
     
@@ -32,7 +32,10 @@ class RepInfoViewController: UIViewController {
         imageUrlString = imageUrlString.replacingOccurrences(of: "http://", with: "https://")
         namelabel.text = official["name"]
         partyLabel.text = official["party"]
-        populateImage(imageView: image, url: (URL(string: imageUrlString) ?? unknownImageUrl)!)
+        
+        if (imageUrlString != ""){
+            populateImage(imageView: image, url: (URL(string: imageUrlString) ?? unknownImageUrl)!)
+        }
         populateButtons()
         
         // Do any additional setup after loading the view.

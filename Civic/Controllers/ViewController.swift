@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         searchBar.delegate = self
         
         tableView.register(UINib(nibName: "RepCell", bundle: nil), forCellReuseIdentifier: "repCell")
+        electionTableView.register(UINib(nibName: "RepCell", bundle: nil), forCellReuseIdentifier: "repCell")
         
         NotificationCenter.default.addObserver(self, selector: #selector(addressDeleted), name: Notification.Name("addressDeleted"), object: nil)
 
@@ -71,7 +72,7 @@ class ViewController: UIViewController {
                         return
                       }
                         
-                        var string = "\(data["address"] ?? "") \(data["city"] ?? "") \(data["state"] ?? "") \(data["zip"] ?? "")"
+                        let string = "\(data["address"] ?? "") \(data["city"] ?? "") \(data["state"] ?? "") \(data["zip"] ?? "")"
                         self?.addressString = string.replacingOccurrences(of: " ", with: "%20")
                         repURL = "\(self!.repsManager.baseURL)\(self!.repsManager.key)&address=\(self!.addressString)"
                         print(repURL)
@@ -214,9 +215,10 @@ extension ViewController: UITableViewDataSource{
             return cell
         }
         if tableView == self.electionTableView {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "electionCell", for: indexPath)
-            cell.textLabel?.text = self.electionsManager.elections?[indexPath.row]["name"]
-            cell.detailTextLabel?.text = "Election Day: \(String(describing:  self.electionsManager.elections?[indexPath.row]["date"] ?? ""))"
+            let cell = tableView.dequeueReusableCell(withIdentifier: "repCell", for: indexPath) as! RepCell
+            cell.nameLabel?.text = self.electionsManager.elections?[indexPath.row]["name"]
+            cell.titleLabel?.text = "Election Day: \(String(describing:  self.electionsManager.elections?[indexPath.row]["date"] ?? ""))"
+            cell.partyImage.isHidden = true
 
             return cell
         }

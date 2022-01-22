@@ -23,8 +23,12 @@ class ElectionDetailViewController: UIViewController {
     
     @IBOutlet weak var pageLabel: UILabel!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        electionTableView.register(UINib(nibName: "RepCell", bundle: nil), forCellReuseIdentifier: "repCell")
+
         electionDetailManager.delegate = self
         electionTitleLabel.text = electionTitle
         
@@ -32,6 +36,7 @@ class ElectionDetailViewController: UIViewController {
         electionTableView.dataSource = self
         
         electionDetailManager.performElectionRequest(electionID: electionID, address: addressString)
+        
 
         // Do any additional setup after loading the view.
     }
@@ -55,7 +60,7 @@ extension ElectionDetailViewController: ElectionDetailManagerDelegate{
         
         DispatchQueue.main.async {
             if(self.electionDetailManager.contests.count < 1){
-                self.pageLabel.text = "There is more information available for the"
+                self.pageLabel.text = "No additional information associated current address for the "
             }
             self.electionTableView.reloadData()
         }
@@ -69,8 +74,10 @@ extension ElectionDetailViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "contestCell", for: indexPath)
-        cell.textLabel?.text = self.electionDetailManager.contests[indexPath.row]["name"]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "repCell", for: indexPath) as! RepCell
+        cell.nameLabel?.text = self.electionDetailManager.contests[indexPath.row]["name"]
+        cell.titleLabel.isHidden = true
+        cell.partyImage.isHidden = true
 
         return cell
     }
@@ -80,5 +87,10 @@ extension ElectionDetailViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 60 //or whatever you need
     }
 }

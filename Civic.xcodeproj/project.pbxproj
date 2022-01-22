@@ -250,6 +250,8 @@
 			dependencies = (
 			);
 			name = Civic;
+			packageProductDependencies = (
+			);
 			productName = Civic;
 			productReference = 83B7FC70278F72CF002CE83E /* Civic.app */;
 			productType = "com.apple.product-type.application";
@@ -322,6 +324,8 @@
 				Base,
 			);
 			mainGroup = 83B7FC67278F72CF002CE83E;
+			packageReferences = (
+			);
 			productRefGroup = 83B7FC71278F72CF002CE83E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -684,7 +688,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.Civic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Civic.app/Civic";
 			};
@@ -704,7 +708,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cmarshallmoriarty.Civic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Civic.app/Civic";
 			};

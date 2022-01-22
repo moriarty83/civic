@@ -6,7 +6,10 @@
 //
 
 import XCTest
+import Firebase
 @testable import Civic
+
+
 
 class CivicTests: XCTestCase {
 
