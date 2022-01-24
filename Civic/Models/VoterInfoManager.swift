@@ -20,7 +20,6 @@ struct VoterInfoManager {
     var baseURL = "https://www.googleapis.com/civicinfo/v2/voterinfo?key=\(K.Reps.api_key!)&electionId=2000&address="
     
     func performRequest(urlString: String){
-        print(urlString)
         if let url = URL(string: urlString){
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error ) in
@@ -41,9 +40,6 @@ struct VoterInfoManager {
         var voterInfo: Array<Dictionary<String, String>> = []
         do {
         let json = try JSON(data: dataFromNetworking)
-            print("Swifty VoterInfo")
-            print(json["state"][0]["electionAdministrationBody"]["name"])
-            
             voterInfo.append(["name": "Election Adminstrator", "value": json["state"][0]["electionAdministrationBody"]["name"].stringValue, "type": "info"])
             voterInfo.append(["name": "Election Info", "value": json["state"][0]["electionAdministrationBody"]["electionInfoUrl"].stringValue, "type": "link"])
             voterInfo.append(["name": "Voter Registration", "value": json["state"][0]["electionAdministrationBody"]["electionRegistrationUrl"].stringValue, "type": "link"])
@@ -57,7 +53,6 @@ struct VoterInfoManager {
             print(error)
 
         }
-//        print (voterInfo)
         return voterInfo
         
     }

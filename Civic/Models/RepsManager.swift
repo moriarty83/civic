@@ -24,7 +24,6 @@ struct RepsManager {
     var address = ""
     
     func performRequest(with urlString: String){
-        print(urlString)
         if let url = URL(string: urlString){
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error ) in
@@ -45,9 +44,7 @@ struct RepsManager {
         var officials: [[String:String]] = []
         do {
         let json = try JSON(data: dataFromNetworking)
-        print("Swifty JSON")
 
-            print(type(of: json["officials"]))
             let officalNames =  json["officials"].arrayValue.map {$0["name"].stringValue}
             let officalParty =  json["officials"].arrayValue.map {$0["party"].stringValue}
 
@@ -56,7 +53,6 @@ struct RepsManager {
                 
                 for (_, value) in office["officialIndices"]{
                     let index: Int = Int(value.rawString()!)!
-                    print(json["officials"][index]["urls"][0].stringValue)
                     officials.append(["name": officalNames[index],
                                       "office": office["name"].stringValue,
                                       "party": officalParty[index],
@@ -78,7 +74,6 @@ struct RepsManager {
             print(error)
 
         }
-//        print (officials)
         return officials
         
     }

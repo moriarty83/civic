@@ -22,7 +22,6 @@ struct ElectionDetailManager{
     
     func performElectionRequest(electionID: String, address: String){
         let urlString = "https://www.googleapis.com/civicinfo/v2/voterinfo?key=\(K.Reps.api_key!)&electionId=\(electionID)&address=\(address)"
-        print(urlString)
         if let url = URL(string: urlString){
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error ) in

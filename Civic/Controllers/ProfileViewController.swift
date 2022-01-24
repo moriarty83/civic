@@ -48,7 +48,6 @@ class ProfileViewController: UIViewController {
             let state = stateTextField.text,
             let zip = zipTextField.text{
 
-            print("making db req")
             let dataArray = [
                 K.FStore.addressField : address,
                 K.FStore.cityField : city,
@@ -56,7 +55,6 @@ class ProfileViewController: UIViewController {
                 K.FStore.zipField: zip]
             
             db.collection("addresses").document(user).setData(dataArray)
-            print (dataArray)
             self.navigationController?.popToRootViewController(animated: true)
             
         }

@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     var menuItems = ["Welcome"]
     
+    var showMenu = true
+    
     let indexCount = 0
     
     let db = Firestore.firestore()
@@ -78,7 +80,6 @@ class ViewController: UIViewController {
                         self?.addressString = string.replacingOccurrences(of: " ", with: "%20")
                         self?.userAddressString = string.replacingOccurrences(of: " ", with: "%20")
                         repURL = "\(self!.repsManager.baseURL)\(self!.repsManager.key)&address=\(self!.addressString)"
-                        print(repURL)
                         self!.repsManager.performRequest(with: repURL)
                         self!.detailsButton.configuration?.subtitle = "\(self?.addressString.replacingOccurrences(of: "%20", with: " ") ?? "")"
                         self!.loadMenu()
@@ -135,7 +136,6 @@ extension ViewController: RepsManagerDelegate{
 extension ViewController: ElectionManagerDelegate{
     func didUpdateElections(_ electionManager:   ElectionManager, elections: [[String : String]]) {
         self.electionsManager.elections = elections
-        print(elections)
         DispatchQueue.main.async {
             self.electionTableView.reloadData()
         }
@@ -252,10 +252,11 @@ extension ViewController{
         addressString = ""
         repsManager.reps = []
         tableView.reloadData()
+        self.showMenu = false
+        loadMenu()
     }
     
     func Logout(){
-        print("logging out")
         let firebaseAuth = Auth.auth()
         do {
           try firebaseAuth.signOut()
@@ -282,6 +283,7 @@ extension ViewController{
         
         if(self.loggedIn){
             self.menuItems = ["Profile", "Logout"]
+            self.showMenu = false
         }
         else{
             self.menuItems = ["Login", "Register", "Continue as Guest"]
@@ -289,7 +291,7 @@ extension ViewController{
         }
         
         let menuView = BTNavigationDropdownMenu(title: "Menu", items: menuItems)
-        if(!loggedIn){
+        if(showMenu){
             menuView.show()
         }
         self.navigationItem.titleView = menuView
@@ -298,7 +300,6 @@ extension ViewController{
         menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
         menuView.checkMarkImage = nil
         menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
-            print("Did select item  \(String(describing: self?.menuItems[indexPath]))")
             switch self?.menuItems[indexPath] {
                 case "Profile":
                     self?.ViewProfile()
@@ -308,6 +309,8 @@ extension ViewController{
                     self?.Logout()
                 case "Register":
                     self?.Register()
+                case "Continue as Guest":
+                    self?.ContinueAsGuest()
                 default:
                     print("Enjoy your day!")
             }

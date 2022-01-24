@@ -28,7 +28,6 @@ class RepInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(official)
         imageUrlString = official["photoUrl"] ?? imageUrlString
         imageUrlString = imageUrlString.replacingOccurrences(of: "http://", with: "https://")
         namelabel.text = official["name"]
@@ -72,8 +71,6 @@ class RepInfoViewController: UIViewController {
     }
     
     func populateImage(imageView: UIImageView, url: URL) {
-        print("loading image")
-        print(url)
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             DispatchQueue.main.async { //all changes to UI must be called on main thread
                 if let error = error {

@@ -23,7 +23,6 @@ class VoterInfoViewController: UIViewController {
         super.viewDidLoad()
         voterInfoManager.delegate = self
         let voterURL = self.voterInfoManager.baseURL+addressString
-        print(addressString)
         voterInfoTableView.delegate = self
         voterInfoTableView.dataSource = self
         
@@ -41,7 +40,6 @@ class VoterInfoViewController: UIViewController {
 
 extension VoterInfoViewController: VoterInfoManagerDelegate{
     func didUpdateVoterInfo(_ voterInfoManager: VoterInfoManager, voterInfo: Array<Dictionary<String, String>>) {
-        print(voterInfo)
         self.voterInfoManager.voterInfo = voterInfo
         print(self.voterInfoManager.voterInfo)
         DispatchQueue.main.async {

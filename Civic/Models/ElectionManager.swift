@@ -40,7 +40,6 @@ struct ElectionManager {
         var elections: [[String:String]] = []
         do {
         let json = try JSON(data: dataFromNetworking)
-            print("Swifty Elections")
             
             for (_, election):(String, JSON) in json["elections"] {
                 elections.append(["name": election["name"].stringValue, "date": election["electionDay"].stringValue,  "division": election["ocdDivisionId"].stringValue, "id": election["id"].stringValue])
