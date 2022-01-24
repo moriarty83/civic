@@ -1,8 +1,8 @@
-#  Civic Voter Companion
+# Civic Voter Companion
 
 ## About
 
-The Civic Voter Companion is an iOS App available onthe App Store designed to make civic engagement easier. 
+The Civic Voter Companion is an iOS App available onthe App Store designed to make civic engagement easier.
 
 Powered by the Google Civic API, users have information about their elected representatives from the Federal down to the Local level at their fingertips. Not only is information available, but the Civic Voter Companion links directly to Officials website and social media accounts. Plus, direct links to State's voter resrouces including registration, absentee ballot information and more are just a touch away.
 
@@ -22,8 +22,19 @@ Please remember this app cannot be usesd to vote, register to vote, request an a
 
 ## Screenshots
 
+### iPhone
 
+<img src="ReadmeImages/iphone01.png" width="200">
+<img src="ReadmeImages/iphone02.png" width="200">
+<img src="ReadmeImages/iphone03.png" width="200">
+<img src="ReadmeImages/iphone04.png" width="200">
 
+### iPad
+
+<img src="ReadmeImages/ipad01.png" width="200">
+<img src="ReadmeImages/ipad02.png" width="200">
+<img src="ReadmeImages/ipad03.png" width="200">
+<img src="ReadmeImages/ipad04.png" width="200">
 
 ## Requirements
 
@@ -44,10 +55,19 @@ Search the AppStore for "Civic Voting Companion" or visit https://apps.apple.com
 - BTNavigationDropdownMenu
 - IQKeyboardManager
 
+## View Controller Diagram
+
+<img src="ReadmeImages/view_diagram.png">
+
+## Database/Route Diagram
+
+<img src="ReadmeImages/db_structure.png">
+
 ## Roadmap
 
 Features and improvments we would like to see in the future are:
-- 
 
-
-
+- Add Calendar/Notifications for elections
+- Allow users to use their current loction when searching.
+- Expand information available on Officials and Elections.
+- Android Version

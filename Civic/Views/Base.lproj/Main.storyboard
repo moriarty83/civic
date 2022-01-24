@@ -153,6 +153,7 @@
                         <segue destination="axG-Tg-eJx" kind="show" identifier="profileSegue" id="iIo-lQ-Qk3"/>
                         <segue destination="Pfg-1f-IQ4" kind="show" identifier="voterInfoSegue" id="d7i-SI-YLM"/>
                         <segue destination="1fb-5G-SeL" kind="show" identifier="repInfoSegue" id="QOI-xf-fib"/>
+                        <segue destination="Emb-T1-vXO" kind="show" id="M5i-gp-FVZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -214,18 +215,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lhf-Dt-zPg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="-346"/>
+            <point key="canvasLocation" x="2041" y="844"/>
         </scene>
         <!--Election Detail View Controller-->
         <scene sceneID="gEn-za-xev">
             <objects>
                 <viewController storyboardIdentifier="electionDetail" id="Emb-T1-vXO" customClass="ElectionDetailViewController" customModule="Civic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ukg-XP-NNG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9oS-PQ-YAh">
-                                <rect key="frame" x="10" y="54" width="394" height="73"/>
+                                <rect key="frame" x="10" y="10" width="394" height="73"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contests in the Upcoming" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uu7-rS-g14">
                                         <rect key="frame" x="10" y="0.0" width="374" height="24"/>
@@ -248,7 +249,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lwE-xz-wmQ">
-                                <rect key="frame" x="10" y="167" width="394" height="630"/>
+                                <rect key="frame" x="10" y="123" width="394" height="586"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="contestCell" id="aHH-tJ-Ztc">
@@ -274,6 +275,7 @@
                             <constraint firstItem="bYs-3n-szO" firstAttribute="trailing" secondItem="lwE-xz-wmQ" secondAttribute="trailing" constant="10" id="y6b-fk-zdc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="rwt-sn-S1a"/>
                     <connections>
                         <outlet property="electionTableView" destination="lwE-xz-wmQ" id="E7Q-ac-0wS"/>
                         <outlet property="electionTitleLabel" destination="ZAC-QC-b6H" id="h5L-44-seg"/>
@@ -282,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="keN-gp-CF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1920.289855072464" y="304.6875"/>
+            <point key="canvasLocation" x="1329" y="844"/>
         </scene>
         <!--Rep Info View Controller-->
         <scene sceneID="ILM-PL-nU4">
@@ -387,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2if-3U-sHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2654" y="84"/>
+            <point key="canvasLocation" x="2738" y="844"/>
         </scene>
         <!--Register-->
         <scene sceneID="zeB-gr-kwp">
@@ -468,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hn-hj-cR9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="1001"/>
+            <point key="canvasLocation" x="-268" y="845"/>
         </scene>
         <!--Login-->
         <scene sceneID="xTO-ed-dcz">
@@ -557,7 +559,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zc-af-vHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1635" y="1001"/>
+            <point key="canvasLocation" x="442" y="845"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Mx9-l0-f6N">
@@ -705,7 +707,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKr-Uo-F6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="1001"/>
+            <point key="canvasLocation" x="-971" y="845"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DJY-Db-eL0">

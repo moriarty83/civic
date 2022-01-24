@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "container:"
+      name = "ReadmeImages">
+      <FileRef
+         location = "group:/Users/chris/OneDrive/General Assembly/Dev Folder/seir-ringo/capstone/Civic/ipad01.png">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/chris/OneDrive/General Assembly/Dev Folder/seir-ringo/capstone/Civic/ipad02.png">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/chris/OneDrive/General Assembly/Dev Folder/seir-ringo/capstone/Civic/ipad03.png">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/chris/OneDrive/General Assembly/Dev Folder/seir-ringo/capstone/Civic/ipad04.png">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/chris/OneDrive/General Assembly/Dev Folder/seir-ringo/capstone/Civic/iphone01.png">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/chris/OneDrive/General Assembly/Dev Folder/seir-ringo/capstone/Civic/iphone02.png">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/chris/OneDrive/General Assembly/Dev Folder/seir-ringo/capstone/Civic/iphone03.png">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/chris/OneDrive/General Assembly/Dev Folder/seir-ringo/capstone/Civic/iphone04.png">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:README.md">
    </FileRef>
