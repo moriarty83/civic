@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BTNavigationDropdownMenu
 
 class RepInfoViewController: UIViewController {
     
@@ -39,6 +40,10 @@ class RepInfoViewController: UIViewController {
         populateButtons()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+            loadMenu()
     }
     
     @IBAction func didTapWebsite(_ sender: UIButton) {
@@ -107,5 +112,18 @@ class RepInfoViewController: UIViewController {
             social2Button.isHidden = true
         }
     }
-    
+}
+
+extension RepInfoViewController{
+    func loadMenu(){
+        let menuView = BTNavigationDropdownMenu(title: "Representative", items: ["Home"])
+
+        self.navigationItem.titleView = menuView
+        menuView.menuTitleColor = UIColor(named: "ThemeWhite")
+        menuView.cellTextLabelColor = UIColor(named: "ThemeWhite")
+        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            self?.navigationController?.popToRootViewController(animated: true)
+        }
+    }
 }

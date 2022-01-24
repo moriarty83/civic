@@ -5,12 +5,21 @@
 //  Created by Christopher M Moriarty on 1/12/22.
 //
 import Foundation
+import UIKit
+import BTNavigationDropdownMenu
 
 struct K {
     static let loginSegue = "loginToCivic"
     
+    static var userAddressString = ""
+
+    
     struct Reps {
         static let api_key = Bundle.main.infoDictionary?["CIVIC_KEY"] as? String
+    }
+    
+    struct Auth{
+        static var loggedIn = false
     }
     
     struct FStore {
@@ -21,5 +30,8 @@ struct K {
         static let cityField = "city"
         static let stateField = "state"
         static let zipField = "zip"
+        
     }
+    
+    
 }

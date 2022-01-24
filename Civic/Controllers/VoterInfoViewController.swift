@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import BTNavigationDropdownMenu
 
 class VoterInfoViewController: UIViewController {
 
@@ -32,7 +33,10 @@ class VoterInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+            loadMenu()
+    }
+    
 }
 
 extension VoterInfoViewController: VoterInfoManagerDelegate{
@@ -67,15 +71,28 @@ extension VoterInfoViewController: UITableViewDelegate{
 
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-        {
-            if(voterInfoManager.voterInfo[indexPath.row]["type"] == "link"){
-                guard let urlString = self.voterInfoManager.voterInfo[indexPath.row]["value"] else { return  }
-                if let url = URL(string: urlString)
-                {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
-                
+    {
+        if(voterInfoManager.voterInfo[indexPath.row]["type"] == "link"){
+            guard let urlString = self.voterInfoManager.voterInfo[indexPath.row]["value"] else { return  }
+            if let url = URL(string: urlString)
+            {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
+            
         }
+    }
 }
 
+extension VoterInfoViewController{
+    func loadMenu(){
+        let menuView = BTNavigationDropdownMenu(title: "Resources", items: ["Home"])
+
+        self.navigationItem.titleView = menuView
+        menuView.menuTitleColor = UIColor(named: "ThemeWhite")
+        menuView.cellTextLabelColor = UIColor(named: "ThemeWhite")
+        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            self?.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+}

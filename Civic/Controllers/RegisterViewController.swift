@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import BTNavigationDropdownMenu
 
 class RegisterViewController: UIViewController {
 
@@ -18,6 +19,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var confirmPwdTextField: UITextField!
     
     @IBOutlet weak var notificationLabel: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+            loadMenu()
+    }
     
     @IBAction func registerPressed(_ sender: UIButton) {
         
@@ -55,4 +60,18 @@ class RegisterViewController: UIViewController {
        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
        return emailTest.evaluate(with: emailID)
    }
+}
+
+extension RegisterViewController{
+    func loadMenu(){
+        let menuView = BTNavigationDropdownMenu(title: "Register", items: ["Home"])
+
+        self.navigationItem.titleView = menuView
+        menuView.menuTitleColor = UIColor(named: "ThemeWhite")
+        menuView.cellTextLabelColor = UIColor(named: "ThemeWhite")
+        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            self?.navigationController?.popToRootViewController(animated: true)
+        }
+    }
 }

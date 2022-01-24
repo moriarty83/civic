@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import BTNavigationDropdownMenu
 
 class LoginViewController: UIViewController {
 
@@ -14,6 +15,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     
     @IBOutlet weak var warningLabel: UILabel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+            loadMenu()
+    }
     
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text{
@@ -52,3 +57,16 @@ class LoginViewController: UIViewController {
 
 }
 
+extension LoginViewController{
+    func loadMenu(){
+        let menuView = BTNavigationDropdownMenu(title: "Login", items: ["Home"])
+
+        self.navigationItem.titleView = menuView
+        menuView.menuTitleColor = UIColor(named: "ThemeWhite")
+        menuView.cellTextLabelColor = UIColor(named: "ThemeWhite")
+        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            self?.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+}

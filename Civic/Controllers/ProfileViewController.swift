@@ -32,6 +32,11 @@ class ProfileViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+            loadMenu()
+    }
+    
     @IBAction func didTapUpdate(_ sender: Any) {
         if(addressTextField.text == ""){
             return
@@ -65,6 +70,17 @@ class ProfileViewController: UIViewController {
         }
     }
 }
-    
 
+extension ProfileViewController{
+    func loadMenu(){
+        let menuView = BTNavigationDropdownMenu(title: "Profile", items: ["Home"])
 
+        self.navigationItem.titleView = menuView
+        menuView.menuTitleColor = UIColor(named: "ThemeWhite")
+        menuView.cellTextLabelColor = UIColor(named: "ThemeWhite")
+        menuView.cellBackgroundColor = UIColor(named: "ThemePurple")
+        menuView.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            self?.navigationController?.popToRootViewController(animated: true)
+        }
+    }
+}
