@@ -1,4 +1,4 @@
-# Civic Voter Companion
+# Civic Voting Companion
 
 ## About
 
